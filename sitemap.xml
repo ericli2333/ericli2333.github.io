@@ -142,20 +142,6 @@
   </url>
   
   <url>
-    <loc>https://blogs.ericli.vip/tags/ICS/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blogs.ericli.vip/tags/notes/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blogs.ericli.vip/tags/math/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -171,6 +157,20 @@
   
   <url>
     <loc>https://blogs.ericli.vip/tags/Integral/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blogs.ericli.vip/tags/ICS/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blogs.ericli.vip/tags/notes/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -205,6 +205,13 @@
   </url>
   
   <url>
+    <loc>https://blogs.ericli.vip/tags/git/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blogs.ericli.vip/tags/wsl/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -226,20 +233,6 @@
   </url>
   
   <url>
-    <loc>https://blogs.ericli.vip/tags/git/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blogs.ericli.vip/tags/AVL/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blogs.ericli.vip/tags/server/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -248,6 +241,13 @@
   
   <url>
     <loc>https://blogs.ericli.vip/tags/frp/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blogs.ericli.vip/tags/AVL/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -263,28 +263,14 @@
   </url>
   
   <url>
-    <loc>https://blogs.ericli.vip/categories/ICS/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blogs.ericli.vip/categories/Algorithm/Disjoint-Set-Union/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blogs.ericli.vip/categories/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blogs.ericli.vip/categories/Math/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blogs.ericli.vip/categories/ICS/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -298,6 +284,13 @@
   </url>
   
   <url>
+    <loc>https://blogs.ericli.vip/categories/Algorithm/Disjoint-Set-Union/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blogs.ericli.vip/categories/Math/Math-Analysis/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -305,7 +298,7 @@
   </url>
   
   <url>
-    <loc>https://blogs.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://blogs.ericli.vip/categories/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -326,7 +319,7 @@
   </url>
   
   <url>
-    <loc>https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/wsl/</loc>
+    <loc>https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/git/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -340,14 +333,7 @@
   </url>
   
   <url>
-    <loc>https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/git/</loc>
-    <lastmod>2023-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blogs.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/AVL/</loc>
+    <loc>https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/wsl/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -355,6 +341,20 @@
   
   <url>
     <loc>https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/gitlab/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blogs.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blogs.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/AVL/</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
