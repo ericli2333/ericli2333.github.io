@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Blogs of Eric Li</title>
   
   
   <link href="https://blogs.ericli.vip/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://blogs.ericli.vip/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Eric Li</name>
     
   </author>
   
