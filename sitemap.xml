@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ericli.vip/about/index.html</loc>
+    
+    <lastmod>2023-10-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ericli.vip/2023/10/09/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAVSCode%E7%8E%AF%E5%A2%83%E7%BC%96%E5%86%99c-%E4%BB%A3%E7%A0%81/</loc>
     
     <lastmod>2023-10-09</lastmod>
@@ -102,15 +111,6 @@
   
   <url>
     <loc>https://www.ericli.vip/2023/09/28/Algorithm/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
-    
-    <lastmod>2023-09-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/about/index.html</loc>
     
     <lastmod>2023-09-28</lastmod>
     
