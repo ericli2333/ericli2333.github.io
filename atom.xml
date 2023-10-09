@@ -3,11 +3,11 @@
   <title>Blogs of Eric Li</title>
   
   
-  <link href="https://blogs.ericli.vip/atom.xml" rel="self"/>
+  <link href="https://www.ericli.vip/atom.xml" rel="self"/>
   
-  <link href="https://blogs.ericli.vip/"/>
-  <updated>2023-10-07T12:59:07.543Z</updated>
-  <id>https://blogs.ericli.vip/</id>
+  <link href="https://www.ericli.vip/"/>
+  <updated>2023-10-09T02:11:06.695Z</updated>
+  <id>https://www.ericli.vip/</id>
   
   <author>
     <name>Eric Li</name>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何在本地搭建VSCode环境编写c++代码</title>
+    <link href="https://www.ericli.vip/2023/10/09/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAVSCode%E7%8E%AF%E5%A2%83%E7%BC%96%E5%86%99c-%E4%BB%A3%E7%A0%81/"/>
+    <id>https://www.ericli.vip/2023/10/09/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAVSCode%E7%8E%AF%E5%A2%83%E7%BC%96%E5%86%99c-%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-10-09T01:01:23.000Z</published>
+    <updated>2023-10-09T02:11:06.695Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h1><p>在一个cpp项目中，文件结构如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">|-- .vscode/</span><br><span class="line">|    |-- setting.json</span><br><span class="line">|    |-- launch.json</span><br><span class="line">|    |-- tasks.json</span><br><span class="line">|-- bin/ </span><br><span class="line">|-- CMakeLists.txt</span><br><span class="line">|-- main.cpp</span><br></pre></td></tr></table></figure><p>你需要修改的配置都在 <code>.vscode/</code> 目录下面，在那里面修改对应配置</p><p>这里创建了一个 <code>bin/</code> 目录用于存放临时生成的可执行文件</p><p><strong>记得要先创建文件夹</strong></p><h1 id="tasks-json-内容示例"><a href="#tasks-json-内容示例" class="headerlink" title="tasks.json 内容示例"></a><code>tasks.json</code> 内容示例</h1><p><code>tasks.json</code> 用于指明编译、运行的配置，同样记得修改command为你自己的路径，并且把mingw的bin目录添加到path。并且记得在你的项目文件夹下面把 <code>bin/</code> 目录创建好</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g++&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;\\bin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-Wall&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-static-libgcc&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-fexec-charset=GBK&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-std=c++17&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;presentation&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;echo&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;reveal&quot;</span><span class="punctuation">:</span> <span class="string">&quot;always&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;focus&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;panel&quot;</span><span class="punctuation">:</span> <span class="string">&quot;new&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$gcc&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;run&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;fileDirname&#125;\\bin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;presentation&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;echo&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;reveal&quot;</span><span class="punctuation">:</span> <span class="string">&quot;always&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;focus&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;panel&quot;</span><span class="punctuation">:</span> <span class="string">&quot;new&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppbuild&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;C/C++: g++.exe 生成活动文件&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Environment\\mingw64\\bin\\g++.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;-fdiagnostics-color=always&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;\\bin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;fileDirname&#125;&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$gcc&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;detail&quot;</span><span class="punctuation">:</span> <span class="string">&quot;调试器生成的任务。&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><h1 id="launch-json-内容示例"><a href="#launch-json-内容示例" class="headerlink" title="launch.json 内容示例"></a><code>launch.json</code> 内容示例</h1><p><code>launch.json</code> 主要用于调试，注意修改 <code>miDebuggerPath</code> 为你的 <code>gdb</code> 路径</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span> <span class="comment">//这个大括号里是我们的‘调试(Debug)’配置</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Debug&quot;</span><span class="punctuation">,</span> <span class="comment">// 配置名称</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span> <span class="comment">// 配置类型，cppdbg对应cpptools提供的调试功能；可以认为此处只能是cppdbg</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span> <span class="comment">// 请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;fileDirname&#125;\\bin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span> <span class="comment">// 将要进行调试的程序的路径</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 程序调试时传递给程序的命令行参数，这里设为空即可</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">// 设为true时程序将暂停在程序入口处，相当于在main上打断点</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;fileDirname&#125;&quot;</span><span class="punctuation">,</span> <span class="comment">// 调试程序时的工作目录，此处为源码文件所在目录</span></span><br><span class="line">            <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 环境变量，这里设为空即可</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">// 为true时使用单独的cmd窗口，跳出小黑框；设为false则是用vscode的内置终端，建议用内置终端</span></span><br><span class="line">            <span class="attr">&quot;internalConsoleOptions&quot;</span><span class="punctuation">:</span> <span class="string">&quot;neverOpen&quot;</span><span class="punctuation">,</span> <span class="comment">// 如果不设为neverOpen，调试时会跳到“调试控制台”选项卡，新手调试用不到</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span> <span class="comment">// 指定连接的调试器，gdb是minGW中的调试程序</span></span><br><span class="line">            <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Environment\\mingw64\\bin\\gdb.exe&quot;</span><span class="punctuation">,</span> <span class="comment">// 指定调试器所在路径，如果你的minGW装在别的地方，则要改成你自己的路径，注意间隔是\\</span></span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span> <span class="comment">// 调试开始前执行的任务，我们在调试前要编译构建。与tasks.json的label相对应，名字要一样</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;文件结构&quot;&gt;&lt;a href=&quot;#文件结构&quot; class=&quot;headerlink&quot; title=&quot;文件结构&quot;&gt;&lt;/a&gt;文件结构&lt;/h1&gt;&lt;p&gt;在一个cpp项目中，文件结构如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;t</summary>
+      
+    
+    
+    
+    
+    <category term="VSCode" scheme="https://www.ericli.vip/tags/VSCode/"/>
+    
+    <category term="cpp" scheme="https://www.ericli.vip/tags/cpp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何把hexo搭建的博客发布到自己的云服务器，包含部署https</title>
-    <link href="https://blogs.ericli.vip/2023/10/07/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E6%8A%8Ahexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>https://blogs.ericli.vip/2023/10/07/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E6%8A%8Ahexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <link href="https://www.ericli.vip/2023/10/07/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E6%8A%8Ahexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://www.ericli.vip/2023/10/07/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E6%8A%8Ahexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
     <published>2023-10-07T11:59:34.000Z</published>
     <updated>2023-10-07T12:59:07.543Z</updated>
     
@@ -34,21 +59,21 @@
     
     
     
-    <category term="教程" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="hexo" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/hexo/"/>
+    <category term="hexo" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/hexo/"/>
     
     
-    <category term="server" scheme="https://blogs.ericli.vip/tags/server/"/>
+    <category term="server" scheme="https://www.ericli.vip/tags/server/"/>
     
-    <category term="hexo" scheme="https://blogs.ericli.vip/tags/hexo/"/>
+    <category term="hexo" scheme="https://www.ericli.vip/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>非递归无栈AVL树实现</title>
-    <link href="https://blogs.ericli.vip/2023/10/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%9D%9E%E9%80%92%E5%BD%92%E6%97%A0%E6%A0%88AVL%E6%A0%91%E5%AE%9E%E7%8E%B0/"/>
-    <id>https://blogs.ericli.vip/2023/10/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%9D%9E%E9%80%92%E5%BD%92%E6%97%A0%E6%A0%88AVL%E6%A0%91%E5%AE%9E%E7%8E%B0/</id>
+    <link href="https://www.ericli.vip/2023/10/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%9D%9E%E9%80%92%E5%BD%92%E6%97%A0%E6%A0%88AVL%E6%A0%91%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://www.ericli.vip/2023/10/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%9D%9E%E9%80%92%E5%BD%92%E6%97%A0%E6%A0%88AVL%E6%A0%91%E5%AE%9E%E7%8E%B0/</id>
     <published>2023-10-06T09:09:15.000Z</published>
     <updated>2023-10-06T10:00:11.761Z</updated>
     
@@ -62,23 +87,23 @@
     
     
     
-    <category term="数据结构" scheme="https://blogs.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="AVL" scheme="https://blogs.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/AVL/"/>
+    <category term="AVL" scheme="https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/AVL/"/>
     
     
-    <category term="notes" scheme="https://blogs.ericli.vip/tags/notes/"/>
+    <category term="notes" scheme="https://www.ericli.vip/tags/notes/"/>
     
-    <category term="AVL" scheme="https://blogs.ericli.vip/tags/AVL/"/>
+    <category term="AVL" scheme="https://www.ericli.vip/tags/AVL/"/>
     
   </entry>
   
   <entry>
     <title>数据的表示</title>
-    <link href="https://blogs.ericli.vip/2023/10/02/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/"/>
-    <id>https://blogs.ericli.vip/2023/10/02/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/</id>
+    <link href="https://www.ericli.vip/2023/10/02/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/"/>
+    <id>https://www.ericli.vip/2023/10/02/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/</id>
     <published>2023-10-02T14:01:49.000Z</published>
-    <updated>2023-10-06T13:52:34.814Z</updated>
+    <updated>2023-10-09T02:04:40.619Z</updated>
     
     <content type="html"><![CDATA[<h1 id="字，字节，单字，双字"><a href="#字，字节，单字，双字" class="headerlink" title="字，字节，单字，双字"></a>字，字节，单字，双字</h1><p>一个 <code>bit</code> 是1个二进制位，一个 <code>byte</code> (字节)是八个二进制位，也就是两个十六进制数，例如一个全是1的字节可以表示为 <code>0xFF</code> </p><p>一个字在32位的机器上是两个个字节，即十六位，而双字是四个字节，三十二位</p><h1 id="小端方式和大端方式"><a href="#小端方式和大端方式" class="headerlink" title="小端方式和大端方式"></a>小端方式和大端方式</h1><p>小端方式是低有效字节存放在低地址，高有效字节存放在高地址，大段方式相反。</p><p><strong>注意，在机器码反汇编的时候，从左到右依次是低地址到高地址，不用反过来，而且在每一个字节，即两个十六进制数表示一个数的时候，也不用在字节内进行翻转，例如，在一个小端机器的反汇编中，一个数是 <code>b8 01 00 00</code>它对应的数学真值是 <code>0x01B8</code> 即是十进制下的 <code>440</code></strong></p><h1 id="整形"><a href="#整形" class="headerlink" title="整形"></a>整形</h1><h2 id="无符号数"><a href="#无符号数" class="headerlink" title="无符号数"></a>无符号数</h2><p>无符号数直接按照二进制表示，没有歧义，其每一位都是有效位，乘以对应的权值即可转换成对应的数学真值</p><h2 id="有符号数"><a href="#有符号数" class="headerlink" title="有符号数"></a>有符号数</h2><p>有符号数一般按照补码表示，其特征是最高位为符号位，如果是 <code>0</code> 表示是一个正数，否则为负数</p><p>在将一个正数转换为无符号数的时候，如果不超出范围，没有发生溢出的现象，此时的有符号数的机器表示和无符号数是一样的。</p><p>将一个负数转换为无符号数的时候，先取出它的绝对值，将其转换为机器码，然后实行操作 <strong>各位取反，末位加一</strong> 即可得到对应的无符号数的机器码</p><p>将一个有符号数的机器码转换为数学真值时，如果符号位为0，那么就按照无符号数解释即可。否则，应该将除了最高有效位的所有位解释为一个无符号数，然后减去 <code>2^(n-1)</code> 即可得到对应的数学真值。或者可以末尾减一之后再各位取反，得到其绝对值。</p><h2 id="关于补码原理的简述"><a href="#关于补码原理的简述" class="headerlink" title="关于补码原理的简述"></a>关于补码原理的简述</h2><p>补码的原理就是构造一个模运算系统，利用加减运算的溢出机制，是的一个数和它的相反数的补码相加之后正好是 <code>模长 &lt;&lt; 1</code>即让最高位的1溢出，使得运算的结果为0，这样只通过一个加法器就可以实现加法和减法的运算。</p><h2 id="整数运算的注意事项"><a href="#整数运算的注意事项" class="headerlink" title="整数运算的注意事项"></a>整数运算的注意事项</h2><h3 id="逻辑右移和算术右移"><a href="#逻辑右移和算术右移" class="headerlink" title="逻辑右移和算术右移"></a>逻辑右移和算术右移</h3><p>逻辑右移在移动的时候，前面补的位是0，但是算数右移的时候，补位补的是符号位，所以算数右移可以实现负数右移相当于是除以2，即 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="16.469ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 7279.1 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></g><g data-mml-node="mo" transform="translate(1555.8,0)"><g data-mml-node="text"><path data-c="3E" d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z"></path></g><g data-mml-node="text" transform="translate(778,0)"><path data-c="3E" d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z"></path></g></g><g data-mml-node="mn" transform="translate(3389.6,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(4167.3,0)"><g data-mml-node="text"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="text" transform="translate(778,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g></g><g data-mml-node="mo" transform="translate(6001.1,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(6779.1,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g></g></svg></mjx-container>，可行的原因还是模运算系统的原理。</p><h3 id="标志位的置位"><a href="#标志位的置位" class="headerlink" title="标志位的置位"></a>标志位的置位</h3><p>标志位包括 <code>OF</code> 、<code>CF</code> 、<code>PF</code> 、<code>SF</code> 、<code>ZF</code> 、<code>AF</code> ，其含义分别为溢出标志位、进位标志位，奇偶标记为，符号标志位，零标志位，辅助进位标志位。</p><h4 id="OF在加法中的判断方式"><a href="#OF在加法中的判断方式" class="headerlink" title="OF在加法中的判断方式"></a>OF在加法中的判断方式</h4><p>详情见图片<br><img src="https://pic.imgdb.cn/item/651ad7b5c458853aef1a2e67.jpg" alt="加法器置位方法"><br>对于OF的理解：如果输入的两个数A和B是同号的，但是输出的C是不同号的，那么就发生了溢出，置位。</p><p>而CF则是判断进位、借位情况是否发生了变化，如果变化就置位为1，否则为0</p><h1 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h1><p>对于小数，比较好的表示方式是浮点数表示，具体方法见下图<br><img src="https://pic.imgdb.cn/item/651addd3c458853aef1b911b.jpg" alt="浮点数表示方法"></p><h2 id="规格化数"><a href="#规格化数" class="headerlink" title="规格化数"></a>规格化数</h2><p>在32位浮点表示中，阶码的位数为8位，可以表示 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="9.248ex" height="1.903ex" role="img" focusable="false" viewBox="0 -841 4087.4 841"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z" transform="translate(1000,0)"></path></g></g></g><g data-mml-node="mtext" transform="translate(2193.8,0)"><path data-c="A0" d=""></path></g><g data-mml-node="msup" transform="translate(2443.8,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z" transform="translate(1000,0)"></path></g></g></g></g></g></svg></mjx-container> 之间的指数。需要注意的是，对规格化数来说，阶码是需要加上127的偏置的，即阶码的真值为 <code>阶码的机器码 - 127</code>。</p><p>对于规格化数来说，尾数部分的值是<code>1.xxxxx(binary)</code>即尾数的第一位代表 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="3.364ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1486.7 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></g></svg></mjx-container> 后面以此类推</p>]]></content>
     
@@ -90,21 +115,21 @@
     
     
     
-    <category term="ICS" scheme="https://blogs.ericli.vip/categories/ICS/"/>
+    <category term="ICS" scheme="https://www.ericli.vip/categories/ICS/"/>
     
-    <category term="数据的表示" scheme="https://blogs.ericli.vip/categories/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/"/>
+    <category term="数据的表示" scheme="https://www.ericli.vip/categories/ICS/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA/"/>
     
     
-    <category term="ICS" scheme="https://blogs.ericli.vip/tags/ICS/"/>
+    <category term="ICS" scheme="https://www.ericli.vip/tags/ICS/"/>
     
-    <category term="notes" scheme="https://blogs.ericli.vip/tags/notes/"/>
+    <category term="notes" scheme="https://www.ericli.vip/tags/notes/"/>
     
   </entry>
   
   <entry>
     <title>并查集</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/Algorithm/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/Algorithm/%E5%B9%B6%E6%9F%A5%E9%9B%86/</id>
+    <link href="https://www.ericli.vip/2023/09/28/Algorithm/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    <id>https://www.ericli.vip/2023/09/28/Algorithm/%E5%B9%B6%E6%9F%A5%E9%9B%86/</id>
     <published>2023-09-28T11:31:21.000Z</published>
     <updated>2023-09-28T11:32:29.365Z</updated>
     
@@ -120,21 +145,21 @@
     
     
     
-    <category term="Algorithm" scheme="https://blogs.ericli.vip/categories/Algorithm/"/>
+    <category term="Algorithm" scheme="https://www.ericli.vip/categories/Algorithm/"/>
     
-    <category term="Disjoint Set Union" scheme="https://blogs.ericli.vip/categories/Algorithm/Disjoint-Set-Union/"/>
+    <category term="Disjoint Set Union" scheme="https://www.ericli.vip/categories/Algorithm/Disjoint-Set-Union/"/>
     
     
-    <category term="Algorithm" scheme="https://blogs.ericli.vip/tags/Algorithm/"/>
+    <category term="Algorithm" scheme="https://www.ericli.vip/tags/Algorithm/"/>
     
-    <category term="Disjoint Set Union" scheme="https://blogs.ericli.vip/tags/Disjoint-Set-Union/"/>
+    <category term="Disjoint Set Union" scheme="https://www.ericli.vip/tags/Disjoint-Set-Union/"/>
     
   </entry>
   
   <entry>
     <title>数学分析总结</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/Math/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/Math/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/</id>
+    <link href="https://www.ericli.vip/2023/09/28/Math/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/"/>
+    <id>https://www.ericli.vip/2023/09/28/Math/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93/</id>
     <published>2023-09-28T11:28:19.000Z</published>
     <updated>2023-10-02T13:29:23.497Z</updated>
     
@@ -149,25 +174,25 @@
     
     
     
-    <category term="Math" scheme="https://blogs.ericli.vip/categories/Math/"/>
+    <category term="Math" scheme="https://www.ericli.vip/categories/Math/"/>
     
-    <category term="Math Analysis" scheme="https://blogs.ericli.vip/categories/Math/Math-Analysis/"/>
+    <category term="Math Analysis" scheme="https://www.ericli.vip/categories/Math/Math-Analysis/"/>
     
-    <category term="Integral" scheme="https://blogs.ericli.vip/categories/Math/Math-Analysis/Integral/"/>
+    <category term="Integral" scheme="https://www.ericli.vip/categories/Math/Math-Analysis/Integral/"/>
     
     
-    <category term="math" scheme="https://blogs.ericli.vip/tags/math/"/>
+    <category term="math" scheme="https://www.ericli.vip/tags/math/"/>
     
-    <category term="Math Analysis" scheme="https://blogs.ericli.vip/tags/Math-Analysis/"/>
+    <category term="Math Analysis" scheme="https://www.ericli.vip/tags/Math-Analysis/"/>
     
-    <category term="Integral" scheme="https://blogs.ericli.vip/tags/Integral/"/>
+    <category term="Integral" scheme="https://www.ericli.vip/tags/Integral/"/>
     
   </entry>
   
   <entry>
     <title>部署frp服务器发布内网服务并获取免费ssl证书</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E9%83%A8%E7%BD%B2frp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E5%B8%83%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E9%83%A8%E7%BD%B2frp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E5%B8%83%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/</id>
+    <link href="https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E9%83%A8%E7%BD%B2frp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E5%B8%83%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/"/>
+    <id>https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E9%83%A8%E7%BD%B2frp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E5%B8%83%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/</id>
     <published>2023-09-28T11:15:59.000Z</published>
     <updated>2023-09-28T11:33:51.583Z</updated>
     
@@ -182,21 +207,21 @@
     
     
     
-    <category term="教程" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="server" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/"/>
+    <category term="server" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/"/>
     
     
-    <category term="server" scheme="https://blogs.ericli.vip/tags/server/"/>
+    <category term="server" scheme="https://www.ericli.vip/tags/server/"/>
     
-    <category term="frp" scheme="https://blogs.ericli.vip/tags/frp/"/>
+    <category term="frp" scheme="https://www.ericli.vip/tags/frp/"/>
     
   </entry>
   
   <entry>
     <title>如何进行gitlab-ci发布软件包</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cgitlab-ci%E5%8F%91%E5%B8%83%E8%BD%AF%E4%BB%B6%E5%8C%85/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cgitlab-ci%E5%8F%91%E5%B8%83%E8%BD%AF%E4%BB%B6%E5%8C%85/</id>
+    <link href="https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cgitlab-ci%E5%8F%91%E5%B8%83%E8%BD%AF%E4%BB%B6%E5%8C%85/"/>
+    <id>https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cgitlab-ci%E5%8F%91%E5%B8%83%E8%BD%AF%E4%BB%B6%E5%8C%85/</id>
     <published>2023-09-28T11:14:42.000Z</published>
     <updated>2023-09-28T11:33:59.122Z</updated>
     
@@ -211,23 +236,23 @@
     
     
     
-    <category term="教程" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="server" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/"/>
+    <category term="server" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/"/>
     
-    <category term="gitlab" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/gitlab/"/>
+    <category term="gitlab" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/gitlab/"/>
     
     
-    <category term="gitlab" scheme="https://blogs.ericli.vip/tags/gitlab/"/>
+    <category term="gitlab" scheme="https://www.ericli.vip/tags/gitlab/"/>
     
-    <category term="gitlab-ci" scheme="https://blogs.ericli.vip/tags/gitlab-ci/"/>
+    <category term="gitlab-ci" scheme="https://www.ericli.vip/tags/gitlab-ci/"/>
     
   </entry>
   
   <entry>
     <title>本地搭建gitlab</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAgitlab/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAgitlab/</id>
+    <link href="https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAgitlab/"/>
+    <id>https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAgitlab/</id>
     <published>2023-09-28T11:12:58.000Z</published>
     <updated>2023-09-28T11:34:08.886Z</updated>
     
@@ -242,23 +267,23 @@
     
     
     
-    <category term="教程" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="server" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/"/>
+    <category term="server" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/"/>
     
-    <category term="gitlab" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/gitlab/"/>
+    <category term="gitlab" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/gitlab/"/>
     
     
-    <category term="gitlab" scheme="https://blogs.ericli.vip/tags/gitlab/"/>
+    <category term="gitlab" scheme="https://www.ericli.vip/tags/gitlab/"/>
     
-    <category term="server" scheme="https://blogs.ericli.vip/tags/server/"/>
+    <category term="server" scheme="https://www.ericli.vip/tags/server/"/>
     
   </entry>
   
   <entry>
     <title>在wsl上安装texlive</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%9C%A8wsl%E4%B8%8A%E5%AE%89%E8%A3%85texlive/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%9C%A8wsl%E4%B8%8A%E5%AE%89%E8%A3%85texlive/</id>
+    <link href="https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%9C%A8wsl%E4%B8%8A%E5%AE%89%E8%A3%85texlive/"/>
+    <id>https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%9C%A8wsl%E4%B8%8A%E5%AE%89%E8%A3%85texlive/</id>
     <published>2023-09-28T11:09:35.000Z</published>
     <updated>2023-09-28T11:34:15.669Z</updated>
     
@@ -273,25 +298,25 @@
     
     
     
-    <category term="教程" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="wsl" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/wsl/"/>
+    <category term="wsl" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/wsl/"/>
     
     
-    <category term="config" scheme="https://blogs.ericli.vip/tags/config/"/>
+    <category term="config" scheme="https://www.ericli.vip/tags/config/"/>
     
-    <category term="wsl" scheme="https://blogs.ericli.vip/tags/wsl/"/>
+    <category term="wsl" scheme="https://www.ericli.vip/tags/wsl/"/>
     
-    <category term="texlive" scheme="https://blogs.ericli.vip/tags/texlive/"/>
+    <category term="texlive" scheme="https://www.ericli.vip/tags/texlive/"/>
     
-    <category term="latex" scheme="https://blogs.ericli.vip/tags/latex/"/>
+    <category term="latex" scheme="https://www.ericli.vip/tags/latex/"/>
     
   </entry>
   
   <entry>
     <title>termux配置</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/termux%E9%85%8D%E7%BD%AE/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/termux%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/termux%E9%85%8D%E7%BD%AE/"/>
+    <id>https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/termux%E9%85%8D%E7%BD%AE/</id>
     <published>2023-09-28T11:08:01.000Z</published>
     <updated>2023-09-28T11:34:28.812Z</updated>
     
@@ -306,21 +331,21 @@
     
     
     
-    <category term="教程" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="termux" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/termux/"/>
+    <category term="termux" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/termux/"/>
     
     
-    <category term="termux" scheme="https://blogs.ericli.vip/tags/termux/"/>
+    <category term="termux" scheme="https://www.ericli.vip/tags/termux/"/>
     
-    <category term="config" scheme="https://blogs.ericli.vip/tags/config/"/>
+    <category term="config" scheme="https://www.ericli.vip/tags/config/"/>
     
   </entry>
   
   <entry>
     <title>如何配置git</title>
-    <link href="https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/"/>
-    <id>https://blogs.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/</id>
+    <link href="https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/"/>
+    <id>https://www.ericli.vip/2023/09/28/%E6%95%99%E7%A8%8B/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/</id>
     <published>2023-09-28T11:05:07.000Z</published>
     <updated>2023-09-28T11:34:21.845Z</updated>
     
@@ -335,14 +360,14 @@
     
     
     
-    <category term="教程" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="git" scheme="https://blogs.ericli.vip/categories/%E6%95%99%E7%A8%8B/git/"/>
+    <category term="git" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/git/"/>
     
     
-    <category term="config" scheme="https://blogs.ericli.vip/tags/config/"/>
+    <category term="config" scheme="https://www.ericli.vip/tags/config/"/>
     
-    <category term="git" scheme="https://blogs.ericli.vip/tags/git/"/>
+    <category term="git" scheme="https://www.ericli.vip/tags/git/"/>
     
   </entry>
   
