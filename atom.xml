@@ -6,7 +6,7 @@
   <link href="https://www.ericli.vip/atom.xml" rel="self"/>
   
   <link href="https://www.ericli.vip/"/>
-  <updated>2023-10-09T02:28:40.172Z</updated>
+  <updated>2023-10-10T14:09:27.172Z</updated>
   <id>https://www.ericli.vip/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>let&#39;s encrypt申请证书命令</title>
+    <link href="https://www.ericli.vip/2023/10/09/%E6%95%99%E7%A8%8B/let-s-encrypt%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6%E5%91%BD%E4%BB%A4/"/>
+    <id>https://www.ericli.vip/2023/10/09/%E6%95%99%E7%A8%8B/let-s-encrypt%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6%E5%91%BD%E4%BB%A4/</id>
+    <published>2023-10-09T11:36:01.000Z</published>
+    <updated>2023-10-10T14:09:27.172Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="申请范域名证书命令"><a href="#申请范域名证书命令" class="headerlink" title="申请范域名证书命令"></a>申请范域名证书命令</h1><p>使用<code>certbot</code>可以免费申请范域名证书。使用试输入下面的命令，注意替换命令为自己的域名。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo certbot certonly  -d <span class="string">&quot;*.example.com&quot;</span> -d example.com --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory</span><br></pre></td></tr></table></figure><h1 id="申请单域名证书命令"><a href="#申请单域名证书命令" class="headerlink" title="申请单域名证书命令"></a>申请单域名证书命令</h1><p>也可以申请单域名证书，命令如下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo certbot certonly --standalone -m YOUR_EMAIL -d example.com --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory</span><br></pre></td></tr></table></figure><h1 id="Nginx的配置"><a href="#Nginx的配置" class="headerlink" title="Nginx的配置"></a><code>Nginx</code>的配置</h1><p>使用<code>certbot</code>申请的证书会保存在<code>/etc/letsencrypt/live/example.com/</code>下面，注意这里的是一个软连接，指向真正的证书</p><p>下面给出一个监听8080端口，转发到443端口并使用证书进行ssl加密的配置方案：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line"> listen 443 ssl;</span><br><span class="line"> server_name *.example.coml</span><br><span class="line"> ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;</span><br><span class="line"> ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;</span><br><span class="line"> client_max_body_size 50m;</span><br><span class="line"> client_body_buffer_size 256k;</span><br><span class="line"> client_header_timeout 3m;</span><br><span class="line"> client_body_timeout 3m;</span><br><span class="line"> send_timeout 3m;</span><br><span class="line"> proxy_connect_timeout 300s;</span><br><span class="line"> proxy_read_timeout 300s;</span><br><span class="line"> proxy_send_timeout 300s;</span><br><span class="line"> proxy_buffer_size 64k;</span><br><span class="line"> proxy_buffers 4 32k;</span><br><span class="line"> proxy_busy_buffer_size 64k;</span><br><span class="line"> proxy_temp_file_write_size 64k;</span><br><span class="line"> proxy_ignore_client_abort on;</span><br><span class="line"> location / &#123;</span><br><span class="line"> proxy_pass http://127.0.0.1:8080;</span><br><span class="line"> proxy_redirect off;</span><br><span class="line"> proxy_set_header Host $host:80;</span><br><span class="line"> proxy_ssl_server_name on;</span><br><span class="line"> proxy_set_header X-Real_IP $remote_addr;</span><br><span class="line"> proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line"> proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line"> listen 80;</span><br><span class="line"> server_name *.example.com;</span><br><span class="line"> location / &#123;</span><br><span class="line"> proxy_pass http://127.0.0.1:8080;</span><br><span class="line"> proxy_redirect off;</span><br><span class="line"> proxy_set_header Host $host:80;</span><br><span class="line"> proxy_ssl_server_name on;</span><br><span class="line"> proxy_set_header X-Real_IP $remote_addr;</span><br><span class="line"> proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line"> proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;申请范域名证书命令&quot;&gt;&lt;a href=&quot;#申请范域名证书命令&quot; class=&quot;headerlink&quot; title=&quot;申请范域名证书命令&quot;&gt;&lt;/a&gt;申请范域名证书命令&lt;/h1&gt;&lt;p&gt;使用&lt;code&gt;certbot&lt;/code&gt;可以免费申请范域名证书。使用试输入下面的</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="ssl" scheme="https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/ssl/"/>
+    
+    
+    <category term="server" scheme="https://www.ericli.vip/tags/server/"/>
+    
+    <category term="certbot" scheme="https://www.ericli.vip/tags/certbot/"/>
+    
+    <category term="ssl" scheme="https://www.ericli.vip/tags/ssl/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在本地搭建VSCode环境编写c++代码</title>
