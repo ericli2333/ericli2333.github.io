@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ericli.vip/2023/10/13/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/Convexity/</loc>
+    
+    <lastmod>2023-10-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ericli.vip/2023/10/13/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/Dual%20cone/</loc>
     
     <lastmod>2023-10-13</lastmod>
@@ -12,6 +21,15 @@
   
   <url>
     <loc>https://www.ericli.vip/2023/10/13/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/Cone/</loc>
+    
+    <lastmod>2023-10-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/13/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/%E5%87%B8%E5%87%BD%E6%95%B0/</loc>
     
     <lastmod>2023-10-13</lastmod>
     
@@ -361,6 +379,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://www.ericli.vip/tags/convexity/</loc>
+    <lastmod>2023-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -505,6 +530,13 @@
   
   <url>
     <loc>https://www.ericli.vip/categories/Optimization/Cone/Dual-Cone/</loc>
+    <lastmod>2023-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/categories/Optimization/convexitiy/</loc>
     <lastmod>2023-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
