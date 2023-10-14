@@ -1,3 +1,6 @@
+https://www.ericli.vip/2023/10/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/m%E8%B7%AF%E6%90%9C%E7%B4%A2%E6%A0%91/
+https://www.ericli.vip/2023/10/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/RBT/
+https://www.ericli.vip/2023/10/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/B%E6%A0%91/
 https://www.ericli.vip/2023/10/13/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/Convexity/
 https://www.ericli.vip/2023/10/13/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/Dual%20cone/
 https://www.ericli.vip/2023/10/13/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/Cone/
@@ -47,6 +50,9 @@ https://www.ericli.vip/tags/Cone/
 https://www.ericli.vip/tags/Generalized-inequality/
 https://www.ericli.vip/tags/Dual-Cone/
 https://www.ericli.vip/tags/convexity/
+https://www.ericli.vip/tags/B%E6%A0%91/
+https://www.ericli.vip/tags/m%E8%B7%AF%E6%90%9C%E7%B4%A2%E6%A0%91/
+https://www.ericli.vip/tags/RBT/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/Math/
 https://www.ericli.vip/categories/ICS/
@@ -69,3 +75,6 @@ https://www.ericli.vip/categories/Optimization/
 https://www.ericli.vip/categories/Optimization/Cone/
 https://www.ericli.vip/categories/Optimization/Cone/Dual-Cone/
 https://www.ericli.vip/categories/Optimization/convexitiy/
+https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/B%E6%A0%91/
+https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/m%E8%B7%AF%E6%90%9C%E7%B4%A2%E6%A0%91/
+https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/RBT/
