@@ -1,3 +1,6 @@
+https://www.ericli.vip/2024/02/28/RL/Menu%20of%20Reinforcement%20learning/
+https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Tabular%20Solution%20Methods/
+https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Introduction/
 https://www.ericli.vip/2023/11/16/Optimization/Duality/
 https://www.ericli.vip/2023/11/16/Optimization/Optimization%20Problems/
 https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20one%20dimension/
@@ -21,7 +24,6 @@ https://www.ericli.vip/2023/10/28/ICS/The%20call%20of%20function/
 https://www.ericli.vip/2023/10/27/Cryptology/Stream%20cipher/
 https://www.ericli.vip/2023/10/24/DataStructure/Heap/
 https://www.ericli.vip/2023/10/27/DataStructure/Leftist%20heap/
-https://www.ericli.vip/2024/02/13/Template/hexo/
 https://www.ericli.vip/2023/10/26/Cryptology/Message%20Authentication/
 https://www.ericli.vip/2023/09/28/Math/Integral/
 https://www.ericli.vip/2023/09/28/Blogs/termux%E9%85%8D%E7%BD%AE/
@@ -92,6 +94,7 @@ https://www.ericli.vip/tags/math/
 https://www.ericli.vip/tags/Math/
 https://www.ericli.vip/tags/Analysis/
 https://www.ericli.vip/tags/Integral/
+https://www.ericli.vip/tags/RL/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/
 https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/hexo/
@@ -104,3 +107,4 @@ https://www.ericli.vip/categories/Probability-Theory/
 https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/
 https://www.ericli.vip/categories/Optimization/
 https://www.ericli.vip/categories/Math/
+https://www.ericli.vip/categories/reinforcement-learning/

@@ -6,7 +6,7 @@
   <link href="https://www.ericli.vip/atom.xml" rel="self"/>
   
   <link href="https://www.ericli.vip/"/>
-  <updated>2023-10-27T02:11:17.511Z</updated>
+  <updated>2024-02-28T08:23:16.298Z</updated>
   <id>https://www.ericli.vip/</id>
   
   <author>
@@ -17,19 +17,70 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo</title>
-    <link href="https://www.ericli.vip/2024/02/13/Template/hexo/"/>
-    <id>https://www.ericli.vip/2024/02/13/Template/hexo/</id>
-    <published>2024-02-13T04:28:33.378Z</published>
-    <updated>2023-10-27T02:11:17.511Z</updated>
+    <title></title>
+    <link href="https://www.ericli.vip/2024/02/28/RL/Menu%20of%20Reinforcement%20learning/"/>
+    <id>https://www.ericli.vip/2024/02/28/RL/Menu%20of%20Reinforcement%20learning/</id>
+    <published>2024-02-28T08:25:45.751Z</published>
+    <updated>2024-02-28T08:23:16.298Z</updated>
+    
+    <content type="html"><![CDATA[<p>[[RL&#x2F;Book Learning&#x2F;Introduction|Introduction]]<br>[[RL&#x2F;Book Learning&#x2F;Tabular Solution Methods|Tabular Solution Methods]]</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[[RL&amp;#x2F;Book Learning&amp;#x2F;Introduction|Introduction]]&lt;br&gt;[[RL&amp;#x2F;Book Learning&amp;#x2F;Tabular Solution Methods|Tabular Solution Method</summary>
+      
     
     
     
     
-    <category term="数据结构" scheme="https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+  </entry>
+  
+  <entry>
+    <title>Introduction to reinforcement learning</title>
+    <link href="https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Introduction/"/>
+    <id>https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Introduction/</id>
+    <published>2024-02-28T08:13:00.000Z</published>
+    <updated>2024-02-28T08:13:29.407Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>强化学习的基本思想是从与环境的互动中学习，与其他学习方式最大的两个区别就是：</p><ul><li>trial-and-error search </li><li>delayed reward</li></ul><h1 id="基本元素"><a href="#基本元素" class="headerlink" title="基本元素"></a>基本元素</h1><ul><li>policy</li><li>reward signal</li><li>value function</li><li>a model of environment</li></ul><h2 id="policy"><a href="#policy" class="headerlink" title="policy"></a>policy</h2><p>指<code>agent</code>每次在特定的时间下选择<code>action</code>的策略</p><h2 id="reward-signal"><a href="#reward-signal" class="headerlink" title="reward signal"></a>reward signal</h2><p>指的是整个强化学习的目标，每一次做出决策之后，环境都会给予一个反馈，这里的<code>reward signal</code>是及时反馈</p><h2 id="value-function"><a href="#value-function" class="headerlink" title="value function"></a>value function</h2><p>这里的<code>value function</code>是长期的反馈，是用于衡量一个决策的长期收益的。</p><p><code>value</code>的定义是指未来获得的奖励(<code>reward</code>)的总和的期望。<code>value</code>是基于<code>reward</code>的，只有有<code>reward</code>才能衡量<code>value</code></p><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p><code>model</code>是用来模拟环境变化的，是用来做计划的，强化学习算法可以分为<code>model-based</code>和<code>model-free</code>的</p>]]></content>
     
     
-    <category term="notes" scheme="https://www.ericli.vip/tags/notes/"/>
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;强化学习的基本思想是从与环境的互动中学习，与其他学习方式最大</summary>
+      
+    
+    
+    
+    <category term="reinforcement_learning" scheme="https://www.ericli.vip/categories/reinforcement-learning/"/>
+    
+    
+    <category term="RL" scheme="https://www.ericli.vip/tags/RL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tabular Solution Methods</title>
+    <link href="https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Tabular%20Solution%20Methods/"/>
+    <id>https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Tabular%20Solution%20Methods/</id>
+    <published>2024-02-28T08:04:49.000Z</published>
+    <updated>2024-02-28T08:19:40.112Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Basic-idea"><a href="#Basic-idea" class="headerlink" title="Basic idea"></a>Basic idea</h1><p>基本想法是在状态空间和可能的行动空间都足够小的情况下（能够通过表格或者是数列存下的情况下），通常能够找到精确解</p><h1 id="多臂老虎机-k-armed-bandit-problem"><a href="#多臂老虎机-k-armed-bandit-problem" class="headerlink" title="多臂老虎机(k-armed bandit problem)"></a>多臂老虎机(<code>k-armed bandit problem</code>)</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>现在有 <code>k</code> 种选择，每次可以从 <code>k</code> 种选择种选择一个，每种选择给出的奖励都是基于一个未知但是确定的分布的，学习的目标是在有限的次数中最大化所有的奖励的和。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Basic-idea&quot;&gt;&lt;a href=&quot;#Basic-idea&quot; class=&quot;headerlink&quot; title=&quot;Basic idea&quot;&gt;&lt;/a&gt;Basic idea&lt;/h1&gt;&lt;p&gt;基本想法是在状态空间和可能的行动空间都足够小的情况下（能够通过表格或者是数列</summary>
+      
+    
+    
+    
+    <category term="reinforcement_learning" scheme="https://www.ericli.vip/categories/reinforcement-learning/"/>
+    
+    
+    <category term="RL" scheme="https://www.ericli.vip/tags/RL/"/>
     
   </entry>
   
@@ -454,52 +505,6 @@
     
     
     <category term="notes" scheme="https://www.ericli.vip/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Menu of Algorithm</title>
-    <link href="https://www.ericli.vip/2023/10/24/Algorithm/Menu%20of%20Algorithm/"/>
-    <id>https://www.ericli.vip/2023/10/24/Algorithm/Menu%20of%20Algorithm/</id>
-    <published>2023-10-24T02:51:29.000Z</published>
-    <updated>2023-11-03T12:30:15.970Z</updated>
-    
-    <content type="html"><![CDATA[<p>[[Algorithm/Disjoint Set Union|Disjoint Set Union]]</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[[Algorithm/Disjoint Set Union|Disjoint Set Union]]&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="Menu" scheme="https://www.ericli.vip/tags/Menu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Menu of math</title>
-    <link href="https://www.ericli.vip/2023/10/24/Math/Menu%20of%20math/"/>
-    <id>https://www.ericli.vip/2023/10/24/Math/Menu%20of%20math/</id>
-    <published>2023-10-24T02:43:57.000Z</published>
-    <updated>2023-11-03T12:31:25.601Z</updated>
-    
-    <content type="html"><![CDATA[<p>[[Math/Integral|Integral]]</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;[[Math/Integral|Integral]]&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="Menu" scheme="https://www.ericli.vip/tags/Menu/"/>
     
   </entry>
   
