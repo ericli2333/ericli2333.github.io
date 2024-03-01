@@ -16,7 +16,6 @@ https://www.ericli.vip/2023/10/28/ICS/The%20call%20of%20function/
 https://www.ericli.vip/2023/10/27/Cryptology/Stream%20cipher/
 https://www.ericli.vip/2023/10/24/DataStructure/Heap/
 https://www.ericli.vip/2023/10/27/DataStructure/Leftist%20heap/
-https://www.ericli.vip/2024/03/01/Template/hexo/
 https://www.ericli.vip/2023/10/26/Cryptology/Message%20Authentication/
 https://www.ericli.vip/2023/09/28/Math/Integral/
 https://www.ericli.vip/2023/09/28/Blogs/termux%E9%85%8D%E7%BD%AE/
