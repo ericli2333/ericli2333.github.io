@@ -1,3 +1,4 @@
+https://www.ericli.vip/2024/03/02/RL/Book%20Learning/Finite%20Markov%20Decision/
 https://www.ericli.vip/2023/09/28/Math/Integral/
 https://www.ericli.vip/2023/09/28/Algorithm/Disjoint%20Set%20Union/
 https://www.ericli.vip/2023/10/19/Optimization/Sublevel%20and%20superlevel%20set/
@@ -10,7 +11,6 @@ https://www.ericli.vip/2023/10/13/Optimization/Convexity/
 https://www.ericli.vip/2023/10/13/Optimization/Convex%20Functions/
 https://www.ericli.vip/2023/10/26/Optimization/Conjugate%20Function/
 https://www.ericli.vip/2023/10/13/Optimization/Cone/
-https://www.ericli.vip/2024/03/02/RL/Book%20Learning/Finite%20Markov%20Decision/
 https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Introduction/
 https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Tabular%20Solution%20Methods/
 https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20one%20dimension/
