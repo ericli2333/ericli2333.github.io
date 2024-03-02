@@ -2,7 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.ericli.vip/2024/03/02/RL/Book%20Learning/Finite%20Markov%20Decision/</loc>
+    <loc>https://www.ericli.vip/2023/10/19/Optimization/Sublevel%20and%20superlevel%20set/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/11/16/Optimization/Optimization%20Problems/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/19/Optimization/Operations%20that%20preserve%20convexity/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/19/Optimization/Inequality/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/19/Optimization/Epigraph/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/13/Optimization/Dual%20cone/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/13/Optimization/Convexity/</loc>
     
     <lastmod>2024-03-02</lastmod>
     
@@ -12,6 +66,33 @@
   
   <url>
     <loc>https://www.ericli.vip/2023/10/13/Optimization/Convex%20Functions/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/26/Optimization/Conjugate%20Function/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/13/Optimization/Cone/</loc>
+    
+    <lastmod>2024-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/03/02/RL/Book%20Learning/Finite%20Markov%20Decision/</loc>
     
     <lastmod>2024-03-02</lastmod>
     
@@ -38,24 +119,6 @@
   </url>
   
   <url>
-    <loc>https://www.ericli.vip/2023/11/16/Optimization/Duality/</loc>
-    
-    <lastmod>2023-11-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/11/16/Optimization/Optimization%20Problems/</loc>
-    
-    <lastmod>2023-11-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20one%20dimension/</loc>
     
     <lastmod>2023-11-12</lastmod>
@@ -65,25 +128,7 @@
   </url>
   
   <url>
-    <loc>https://www.ericli.vip/2023/10/19/Optimization/Epigraph/</loc>
-    
-    <lastmod>2023-11-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ericli.vip/2023/11/02/Probability%20Theory/Useful%20Results/</loc>
-    
-    <lastmod>2023-11-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/26/Optimization/Conjugate%20Function/</loc>
     
     <lastmod>2023-11-02</lastmod>
     
@@ -309,60 +354,6 @@
   
   <url>
     <loc>https://www.ericli.vip/2023/09/28/Blogs/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAgitlab/</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/19/Optimization/Sublevel%20and%20superlevel%20set/</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/19/Optimization/Operations%20that%20preserve%20convexity/</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/19/Optimization/Inequality/</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/13/Optimization/Dual%20cone/</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/13/Optimization/Convexity/</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/13/Optimization/Cone/</loc>
     
     <lastmod>2023-10-24</lastmod>
     
@@ -657,55 +648,6 @@
   
   <url>
     <loc>https://www.ericli.vip/tags/Optimization/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/tags/Cone/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/tags/Generalized-inequality/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/tags/convexity/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/tags/Dual-Cone/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/tags/Epigraph/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/tags/Sublevel-set/</loc>
-    <lastmod>2024-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/tags/Superlevel-set/</loc>
     <lastmod>2024-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
