@@ -2,7 +2,6 @@ https://www.ericli.vip/2024/03/02/RL/Book%20Learning/Finite%20Markov%20Decision/
 https://www.ericli.vip/2023/10/13/Optimization/Convex%20Functions/
 https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Introduction/
 https://www.ericli.vip/2024/02/28/RL/Book%20Learning/Tabular%20Solution%20Methods/
-https://www.ericli.vip/2024/03/02/GTA/01/
 https://www.ericli.vip/2023/11/16/Optimization/Duality/
 https://www.ericli.vip/2023/11/16/Optimization/Optimization%20Problems/
 https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20one%20dimension/
