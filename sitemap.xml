@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://www.ericli.vip/2024/03/06/RL/Book%20Learning/Temporal-Difference%20Learning/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ericli.vip/2024/03/05/RL/Book%20Learning/Monte%20Carlo%20Methods/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -246,6 +255,15 @@
   
   <url>
     <loc>https://www.ericli.vip/2023/10/27/DataStructure/Leftist%20heap/</loc>
+    
+    <lastmod>2023-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/03/07/Template/hexo/</loc>
     
     <lastmod>2023-10-27</lastmod>
     
