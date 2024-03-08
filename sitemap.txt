@@ -1,5 +1,5 @@
-https://www.ericli.vip/2024/03/06/RL/Book%20Learning/Temporal-Difference%20Learning/
 https://www.ericli.vip/link/index.html
+https://www.ericli.vip/2024/03/06/RL/Book%20Learning/Temporal-Difference%20Learning/
 https://www.ericli.vip/2024/03/05/RL/Book%20Learning/Monte%20Carlo%20Methods/
 https://www.ericli.vip/2024/03/03/RL/Book%20Learning/Dynamic%20Programming/
 https://www.ericli.vip/2024/03/02/RL/Book%20Learning/Finite%20Markov%20Decision/
