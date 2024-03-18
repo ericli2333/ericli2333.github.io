@@ -1,3 +1,4 @@
+https://www.ericli.vip/2024/03/18/RL/Article%20Reading/DQN/
 https://www.ericli.vip/2024/03/13/RL/RLBook2020%20Learning/Policy%20Gradient%20Methods/
 https://www.ericli.vip/2024/03/12/RL/RLBook2020%20Learning/On-policy%20Control%20with%20Approximation/
 https://www.ericli.vip/2024/03/06/RL/RLBook2020%20Learning/Temporal-Difference%20Learning/
@@ -90,3 +91,4 @@ https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/hexo/
 https://www.ericli.vip/categories/Probability-Theory/
 https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/
 https://www.ericli.vip/categories/reinforcement-learning/
+https://www.ericli.vip/categories/reinforcement-learning/Article-Reading/
