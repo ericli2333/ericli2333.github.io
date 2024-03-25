@@ -74,9 +74,9 @@
     <link href="https://www.ericli.vip/2024/03/18/RL/Article%20Reading/DQN/"/>
     <id>https://www.ericli.vip/2024/03/18/RL/Article%20Reading/DQN/</id>
     <published>2024-03-18T14:25:06.000Z</published>
-    <updated>2024-03-18T14:37:54.122Z</updated>
+    <updated>2024-03-25T15:13:19.213Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ul><li>过往的方法在处理高维度的输入，例如视频和音频的时候略显乏力，往往依赖人工选取特征，但是可以通过卷积神经网络、多层感知机等方式直接利用神经网络来提取高维的特征。</li><li>深度学习里面往往需要大量的有标签的样本，但是RL有延迟奖励问题，一个动作的价值可能需要一个Episode结束之后才能确定</li><li>深度学习里面有一个重要假设是独立同分布采样，但是RL里面的数据往往是有很高的相关性的，不符合该假设</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ul><li>过往的方法在处理高维度的输入，例如视频和音频的时候略显乏力，往往依赖人工选取特征，但是可以通过卷积神经网络、多层感知机等方式直接利用神经网络来提取高维的特征。</li><li>深度学习里面往往需要大量的有标签的样本，但是RL有延迟奖励问题，一个动作的价值可能需要一个Episode结束之后才能确定</li><li>深度学习里面有一个重要假设是独立同分布采样，但是RL里面的数据往往是有很高的相关性的，不符合该假设</li></ul><h1 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h1><h2 id="如何处理图像输入"><a href="#如何处理图像输入" class="headerlink" title="如何处理图像输入"></a>如何处理图像输入</h2><p>前面套一个CNN对图像进行卷积处理，提取图像的特征进行有效的降维处理</p><h2 id="如何处理样本量少的问题"><a href="#如何处理样本量少的问题" class="headerlink" title="如何处理样本量少的问题"></a>如何处理样本量少的问题</h2><p>使用经验回放数组的方法，即创建一个buffer，每次获得一个状态-动作-价值-下一状态组的时候，不仅是运用这个组来进行训练，更是把它放到buffer里面，每次训练的时候从里面采样出一个batch，利用batch来进行训练</p>]]></content>
     
     
       
