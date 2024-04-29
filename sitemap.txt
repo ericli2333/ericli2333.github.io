@@ -1,3 +1,4 @@
+https://www.ericli.vip/2024/04/28/RL/Article%20Reading/DDPG/
 https://www.ericli.vip/2024/04/13/RL/Article%20Reading/DQN%E6%94%B9%E8%BF%9B/
 https://www.ericli.vip/2024/03/20/RL/Learning%20Notes/Environment%20Configuration/
 https://www.ericli.vip/2024/03/18/RL/Article%20Reading/DQN/
@@ -95,3 +96,5 @@ https://www.ericli.vip/categories/Probability-Theory/
 https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/
 https://www.ericli.vip/categories/reinforcement-learning/
 https://www.ericli.vip/categories/reinforcement-learning/Article-Reading/
+https://www.ericli.vip/categories/Article-Reading/
+https://www.ericli.vip/categories/Article-Reading/reinforcement-learning/
