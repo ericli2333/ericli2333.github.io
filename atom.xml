@@ -6,7 +6,7 @@
   <link href="https://www.ericli.vip/atom.xml" rel="self"/>
   
   <link href="https://www.ericli.vip/"/>
-  <updated>2024-04-29T14:42:03.202Z</updated>
+  <updated>2024-04-30T07:41:10.770Z</updated>
   <id>https://www.ericli.vip/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Concurrent Programming —— Thoughts about locks</title>
+    <link href="https://www.ericli.vip/2024/04/30/ICS%20and%20OS/Concurrenct%20Programming/"/>
+    <id>https://www.ericli.vip/2024/04/30/ICS%20and%20OS/Concurrenct%20Programming/</id>
+    <published>2024-04-30T06:30:56.000Z</published>
+    <updated>2024-04-30T07:41:10.770Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于并发中锁、条件变量和信号量的一些随想"><a href="#关于并发中锁、条件变量和信号量的一些随想" class="headerlink" title="关于并发中锁、条件变量和信号量的一些随想"></a>关于并发中锁、条件变量和信号量的一些随想</h1><h2 id="锁——原子性的开始"><a href="#锁——原子性的开始" class="headerlink" title="锁——原子性的开始"></a>锁——原子性的开始</h2><p>众所周知，在并发中，锁是最简单的并发源语，也是最简单的消除数据竞争维护原子性的方法，你甚至只需要使用一对语句：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pthread_mutex_lock(&amp;lock);</span><br><span class="line"><span class="comment">//CS</span></span><br><span class="line">pthread_mutex_unlock(&amp;lock);</span><br></pre></td></tr></table></figure><p>就可以维护中间的代码的原子性了。</p><p>但是如果是朴素的自旋锁的实现会带来一些问题：</p><ol><li>如果多个进程同时尝试抢占一把锁，那么会让多个CPU进入自旋状态，浪费CPU资源</li><li>某些线程被阻塞，继续运行的条件可能需要其它很多线程共同达成，只使用自旋锁这个CPU在很长时间内都不能得到利用<br>那么如何解决第一个问题呢？</li></ol><p>最朴素的思路就是，先尝试获取这个锁，如果获取成功了，就直接进入临界区，如果不成功，就<code>sleep</code> 一段时间，这段时间甚至可以是在不超过上限的情况下指数递增的，如果超过上限就重置为1。这个自旋锁的改进版本在某种意义上可以提高CPU的运行效率，但是仍然是不够的。比如某个线程有明确的唤醒条件，那么可不可以直接让他睡到这个条件达成再唤醒呢？</p><p>答案是可以的，我们可以引入条件变量这个并发源语</p><h2 id="条件变量——让线程在特定条件达成时唤醒"><a href="#条件变量——让线程在特定条件达成时唤醒" class="headerlink" title="条件变量——让线程在特定条件达成时唤醒"></a>条件变量——让线程在特定条件达成时唤醒</h2><p>为了了解条件变量的语义，先看看条件变量在 <code>pthread</code> 库中的API</p><h3 id="条件变量的API"><a href="#条件变量的API" class="headerlink" title="条件变量的API"></a>条件变量的API</h3><p>与条件变量交互主要使用这两个函数：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_wait</span><span class="params">(<span class="type">pthread_cond_t</span> *cond, <span class="type">pthread_mutex_t</span> *mutex)</span>;  </span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_signal</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>; </span><br></pre></td></tr></table></figure><p>而正确的等待线程的写法是：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Pthread_mutex_lock(&amp;lock);  </span><br><span class="line"><span class="keyword">while</span> (ready == <span class="number">0</span>) </span><br><span class="line">    Pthread_cond_wait(&amp;cond, &amp;lock);  </span><br><span class="line"><span class="comment">//CS</span></span><br><span class="line">Pthread_mutex_unlock(&amp;lock); </span><br></pre></td></tr></table></figure><p>正确的唤醒写法是：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Pthread_mutex_lock(&amp;lock);  </span><br><span class="line">ready = <span class="number">1</span>;  </span><br><span class="line">Pthread_cond_signal(&amp;cond);  </span><br><span class="line">Pthread_mutex_unlock(&amp;lock); </span><br></pre></td></tr></table></figure><h3 id="条件变量的语义"><a href="#条件变量的语义" class="headerlink" title="条件变量的语义"></a>条件变量的语义</h3><p>条件变量API中函数 <code>pthread_cond_wait</code> 提供的语义是：</p><ol><li>释放当前线程占有的锁 <code>mutex</code></li><li>在条件 <code>cond</code> 上进入睡眠，释放CPU</li><li>等待条件 <code>cond</code> 发生改变（有别的线程调用 <code>Pthread_cond_signal</code> ）再被唤醒</li><li>尝试重新获取锁 <code>mutex</code><br>而函数 <code>pthread_cond_signal</code> 的语义则是，唤醒所有睡在条件 <code>cond</code> 上的线程<blockquote><p>关于条件变量语义的注意事项：</p><ol><li><code>wait</code> 的语义只是释放锁，等待唤醒并重新拿锁，在被唤醒和拿到锁之间没有原子性保证</li><li><code>signal</code> 提供的语义只是唤醒所有睡在 <code>cond</code> 上的线程，没有提供别的保证，例如唤醒的先后顺序</li></ol></blockquote></li></ol><h3 id="条件变量的规范用法"><a href="#条件变量的规范用法" class="headerlink" title="条件变量的规范用法"></a>条件变量的规范用法</h3><p>理解了上面的语义，就可以看看为什么条件变量的规范用法这么复杂了</p><p>对于在等待的线程来说，由于唤醒和拿锁之间没有原子性保证，所以有可能该线程被唤醒后，有其它的线程先一步获取了锁并对条件（此例中的ready）进行了修改，所以必须使用 <code>while</code> 不停地进行检查，直到当前的线程既持有锁，又满足了唤醒条件。</p><h3 id="Look-Deeper-into-条件变量"><a href="#Look-Deeper-into-条件变量" class="headerlink" title="Look Deeper into 条件变量"></a>Look Deeper into 条件变量</h3><p>更深入的理解条件变量，就要理解这个例子中的 <code>ready</code> 到底代表了什么。笔者认为，这里的ready可以是任何的条件，换句话说，你可以把这里换成任何一个复杂的表达式。而广播只需要在你认为可能使这个表达式满足的地方进行广播就可以了。</p><p>需要注意的是，这里的锁不是随便的一把锁，这把锁是用来保护你的表达式的。即，这把锁保护了表达式的真值不会被修改，维护不变式“只有拿到锁的线程才能对表达式的任意部分做出改变”。否则会出现原子性破坏的并发问题。</p><h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>条件变量可以看做是自旋锁的拓展，实现了线程在特定条件下的休眠与唤醒。</p><h2 id="信号量——专为朴素生产者消费者问题打造"><a href="#信号量——专为朴素生产者消费者问题打造" class="headerlink" title="信号量——专为朴素生产者消费者问题打造"></a>信号量——专为朴素生产者消费者问题打造</h2><p>有一类并发问题被称之为生产者——消费者问题，即生产者的线程产生某些资源，放到有容量上限的缓冲区中，而消费者从缓冲区中取出资源进行消耗。生产者只在有空余的情况下能够放入资源，而消费者只能在有资源的情况下获取资源。</p><p>生产者消费者模型因为太过常用，所以这里有一组非常适合解决该问题的API：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sem_wait</span><span class="params">(<span class="type">sem_t</span> *s)</span> { </span><br><span class="line">  decrement the value of semaphore s by one </span><br><span class="line">  wait <span class="keyword">if</span> value of semaphore s is negative </span><br><span class="line">} </span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sem_post</span><span class="params">(<span class="type">sem_t</span> *s)</span> { </span><br><span class="line">   increment the value of semaphore s by one </span><br><span class="line">   <span class="keyword">if</span> there are one or more threads waiting, wake one</span><br><span class="line"> } </span><br></pre></td></tr></table></figure><p>当然也一般用 <code>p</code> 表示获取一个资源， <code>v</code> 表示放入一个资源</p><p>这套API的语义十分显然，用于处理生产者和消费者问题也十分自然。</p><h3 id="信号量的缺陷"><a href="#信号量的缺陷" class="headerlink" title="信号量的缺陷"></a>信号量的缺陷</h3><p>信号量笔者认为并没有那么好用，在非朴素生产者消费者问题者，甚至可能导致隐式的死锁问题，例如jyy2024年春季学期的操作系统期中测试最后一题，打印合法的括号序列：</p><blockquote><p>每个线程可能打印<code>[</code> <code>]</code> <code>(</code> <code>)</code> 这四种字符，要求每时每刻的括号序列是合法的，即括号必须匹配且小括号中不得有中括号，<code>([])</code> 是不合法序列</p></blockquote><p>如果使用信号量，朴素的想法是用两个信号量分别表示左小括号未被匹配的数量和中括号未被匹配的数量，但是，遇到括号序列 <code>[(</code> 时，如果此时下一个运行的线程是 <code>]</code> 那么根据信号量它前面已经有一个 <code>[</code> 了，是可以打印的，但是 <code>(</code> 这个括号序列让他无法打印。这个时候很难 <strong>只</strong> 用信号量处理。</p><h2 id="计算图-条件变量-无敌"><a href="#计算图-条件变量-无敌" class="headerlink" title="计算图+条件变量=无敌"></a>计算图+条件变量=无敌</h2><p>根据jyy的理论，如果一个并发问题能够构建出计算图，那么只需要在计算图的每条边上建立一个条件变量，然后让前序节点广播对应的条件变量，后续节点<code>cond_wait</code> 就可以了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于并发中锁、条件变量和信号量的一些随想&quot;&gt;&lt;a href=&quot;#关于并发中锁、条件变量和信号量的一些随想&quot; class=&quot;headerlink&quot; title=&quot;关于并发中锁、条件变量和信号量的一些随想&quot;&gt;&lt;/a&gt;关于并发中锁、条件变量和信号量的一些随想&lt;/h1&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="OS" scheme="https://www.ericli.vip/categories/OS/"/>
+    
+    
+    <category term="OS" scheme="https://www.ericli.vip/tags/OS/"/>
+    
+  </entry>
   
   <entry>
     <title>DDPG</title>
@@ -484,30 +508,6 @@
     <category term="notes" scheme="https://www.ericli.vip/tags/notes/"/>
     
     <category term="Probability_Theory" scheme="https://www.ericli.vip/tags/Probability-Theory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>函数的调用</title>
-    <link href="https://www.ericli.vip/2023/10/28/ICS/The%20call%20of%20function/"/>
-    <id>https://www.ericli.vip/2023/10/28/ICS/The%20call%20of%20function/</id>
-    <published>2023-10-28T03:21:08.000Z</published>
-    <updated>2023-10-28T07:46:55.382Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="函数调用完成控制转移之后的栈形态"><a href="#函数调用完成控制转移之后的栈形态" class="headerlink" title="函数调用完成控制转移之后的栈形态"></a>函数调用完成控制转移之后的栈形态</h1><p><img src="http://images.ericli.vip/image/20231028112536.png"><br>从图中可以看到，在完成了控制转移等一系列操作之后，函数的第一个实参的地址在 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="0.036ex" height="0.036ex" role="img" focusable="false" viewBox="0 0 16 16"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"></g></g></svg></mjx-container> 的位置上，这是由于前面依次是 <code>EBP旧值</code> 和 <code>返回地址</code> 两个指针，各占据了4个字节</p><blockquote><p>注意，在函数压栈的时候，入口参数是返序压栈的，即先压入栈中的是最后一个参数，而在C语言中写在最前面的参数最靠近 <code>ebp</code> </p></blockquote><hr><blockquote><p>注意事项：</p><ol><li>做题的时候注意题目给出的立即数是小端还是大端方式存放的</li><li>看汇编写C语言的时候，除了要注意数据的大小，还要通过指令的类型来区分是有符号数还是无符号数</li><li>函数调用的几条指令分别的作用：<ol><li><code>leave</code> 的作用只是先把当前的 <code>esp</code> 设置为当前 <code>ebp</code> 的值，然后把 <code>ebp</code> 恢复成 <code>ebp</code> 旧值</li><li><code>ret</code> 指令的作用是通过上一步恢复的 <code>esp</code> 取出返回地址，把 <code>eip</code> 的值指向返回地址，移交控制权限</li><li><code>call</code> 的作用是保存返回地址，然后移动 <code>eip</code> 到指定位置，移交控制权限</li></ol></li></ol></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;函数调用完成控制转移之后的栈形态&quot;&gt;&lt;a href=&quot;#函数调用完成控制转移之后的栈形态&quot; class=&quot;headerlink&quot; title=&quot;函数调用完成控制转移之后的栈形态&quot;&gt;&lt;/a&gt;函数调用完成控制转移之后的栈形态&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;http</summary>
-      
-    
-    
-    
-    <category term="数据结构" scheme="https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-    <category term="notes" scheme="https://www.ericli.vip/tags/notes/"/>
     
   </entry>
   

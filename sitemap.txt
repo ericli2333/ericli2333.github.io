@@ -1,3 +1,4 @@
+https://www.ericli.vip/2024/04/30/ICS%20and%20OS/Concurrenct%20Programming/
 https://www.ericli.vip/2024/04/28/RL/Article%20Reading/DDPG/
 https://www.ericli.vip/2024/04/13/RL/Article%20Reading/DQN%E6%94%B9%E8%BF%9B/
 https://www.ericli.vip/2024/03/20/RL/Learning%20Notes/Environment%20Configuration/
@@ -31,6 +32,7 @@ https://www.ericli.vip/2023/10/30/Probability%20Theory/Expectation/
 https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20two%20dimension/
 https://www.ericli.vip/2023/10/26/Cryptology/Computational%20security,%20CPA%20security%20and%20CCA%20security/
 https://www.ericli.vip/2023/10/24/Cryptology/PRG%20and%20PRF/
+https://www.ericli.vip/2023/10/28/ICS%20and%20OS/The%20call%20of%20function/
 https://www.ericli.vip/2023/10/28/ICS/The%20call%20of%20function/
 https://www.ericli.vip/2023/10/27/Cryptology/Stream%20cipher/
 https://www.ericli.vip/2023/10/24/DataStructure/Heap/
@@ -49,6 +51,7 @@ https://www.ericli.vip/2023/10/13/DataStructure/B%20Tree/
 https://www.ericli.vip/2023/10/06/DataStructure/AVL/
 https://www.ericli.vip/2023/09/28/Blogs/%E9%83%A8%E7%BD%B2frp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E5%B8%83%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/
 https://www.ericli.vip/2023/09/28/Blogs/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAgitlab/
+https://www.ericli.vip/2023/10/02/ICS%20and%20OS/ICS-1/
 https://www.ericli.vip/2023/10/02/ICS/ICS-1/
 https://www.ericli.vip/2023/10/18/Cryptology/Block%20cipher/
 https://www.ericli.vip/categories/index.html
@@ -83,6 +86,7 @@ https://www.ericli.vip/tags/Math/
 https://www.ericli.vip/tags/ICS/
 https://www.ericli.vip/tags/Probability-Theory/
 https://www.ericli.vip/tags/RL/
+https://www.ericli.vip/tags/OS/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/Cryptology/
 https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
@@ -98,3 +102,4 @@ https://www.ericli.vip/categories/reinforcement-learning/
 https://www.ericli.vip/categories/reinforcement-learning/Article-Reading/
 https://www.ericli.vip/categories/Article-Reading/
 https://www.ericli.vip/categories/Article-Reading/reinforcement-learning/
+https://www.ericli.vip/categories/OS/
