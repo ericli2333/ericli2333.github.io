@@ -1,4 +1,5 @@
 https://www.ericli.vip/2024/08/12/ICS%20and%20OS/Binary%20Index%20Tree/
+https://www.ericli.vip/2024/08/12/Algorithm/Binary%20Index%20Tree/
 https://www.ericli.vip/2024/07/10/ICS%20and%20OS/OS-L%20%20experimemt%20report/
 https://www.ericli.vip/2023/10/09/Blogs/let-s-encrypt%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6%E5%91%BD%E4%BB%A4/
 https://www.ericli.vip/2024/06/07/LaTeX/How%20to%20use%20LaTeX%20elegantly/
