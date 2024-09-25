@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Blogs | Blogs</title><meta name="author" content="Eric Li"><meta name="copyright" content="Eric Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最大熵逆强化学习是Ziebart B D[1]在2008年提出的逆强化学习方法。当时我在看这篇文献时，不太明白如何得到轨迹概率的最大熵形式，在查阅了一些资料后，大部分博文和视频没有太具体的描述公式推导。最后我在李航老师的《统计学习方法》（蓝宝书）[2]中找到了类似的详细的推导。参考书中的最大熵模型推导，本文整理了线性奖励函数（奖励函数为特征函数的线性组合）假设下轨迹概率最大熵形式的推导，而对非线性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blogs">
+<meta property="og:url" content="https://www.ericli.vip/2024/09/25/IRL/Article%20Reading/zhihu%20512638348/index.html">
+<meta property="og:site_name" content="Blogs">
+<meta property="og:description" content="最大熵逆强化学习是Ziebart B D[1]在2008年提出的逆强化学习方法。当时我在看这篇文献时，不太明白如何得到轨迹概率的最大熵形式，在查阅了一些资料后，大部分博文和视频没有太具体的描述公式推导。最后我在李航老师的《统计学习方法》（蓝宝书）[2]中找到了类似的详细的推导。参考书中的最大熵模型推导，本文整理了线性奖励函数（奖励函数为特征函数的线性组合）假设下轨迹概率最大熵形式的推导，而对非线性">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.ericli.vip/img/EldenRing.jpg">
+<meta property="article:published_time" content="2024-09-25T13:09:45.163Z">
+<meta property="article:modified_time" content="2024-09-22T09:56:38.381Z">
+<meta property="article:author" content="Eric Li">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.ericli.vip/img/EldenRing.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.ericli.vip/2024/09/25/IRL/Article%20Reading/zhihu%20512638348/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Blogs',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-09-22 17:56:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blogs" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/EldenRing.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">62</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/Ranni-1.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Blogs"><span class="site-name">Blogs</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">No title</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-09-25T13:09:45.163Z" title="Created 2024-09-25 21:09:45">2024-09-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-09-22T09:56:38.381Z" title="Updated 2024-09-22 17:56:38">2024-09-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>最大熵逆强化学习是Ziebart B D<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/512638348#ref_1">[1]</a>在2008年提出的逆强化学习方法。当时我在看这篇文献时，不太明白如何得到轨迹概率的最大熵形式，在查阅了一些资料后，大部分博文和视频没有太具体的描述公式推导。最后我在李航老师的《统计学习方法》（蓝宝书）<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/512638348#ref_2">[2]</a>中找到了类似的详细的推导。参考书中的最大熵模型推导，本文整理了线性奖励函数（奖励函数为<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?q=%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0&zhida_source=entity&is_preview=1">特征函数</a>的线性组合）假设下轨迹概率最大熵形式的推导，而对非线性奖励函数暂时没推出来，还请大佬指教。第一次写文章，格式没整明白（公式如何居中？如何自动编号？），也请指教。</p>
+<p>最大熵模型的学习等价于以下约束最优化问题：</p>
+<p>$$\max_{P} \sum_{\tau} - P(\tau) \log P(\tau), \ \begin{array}{l} \text { s.t. }\left{\begin{array}{l} \sum_{\tau} P(\tau) \boldsymbol{f}<em>{\tau}&#x3D;\tilde{\boldsymbol{f}} \ \sum</em>{\tau} P(\tau)&#x3D;1 \end{array}\right. \end{array}$$</p>
+<p>其中， $P(\tau)$ 为某条轨迹 $\tau &#x3D; {s_1, s_2, s_3, …, s_T}$ 的概率，$\boldsymbol{f}<em>{\tau} &#x3D; \sum</em>{t} \boldsymbol{f}(s_t)$为该轨迹的特征， $\tilde{\boldsymbol{f}} &#x3D;\sum_{\tilde{\tau}} P(\tilde{\tau})\boldsymbol{f}_{\tilde{\tau}}$ 是专家轨迹的特征期望（feature expectations）。按照最优化问题的习惯，将以上问题写为：</p>
+<p>$$\min_{P} \sum_{\tau} P(\tau) \log P(\tau), \ \begin{array}{l} \text { s.t. }\left{\begin{array}{l} \sum_{\tau} P(\tau) \boldsymbol{f}<em>{\tau}&#x3D;\tilde{\boldsymbol{f}} \ \sum</em>{\tau} P(\tau)&#x3D;1 \end{array}\right. \end{array} (1)$$</p>
+<p>求解约束最优化问题(1)，所得出的解，就是最大熵模型学习的解，同时也会得到所求的奖励函数。如何求解？将约束最优化的原始问题转换为无约束最优化的对偶问题（详细证明参考蓝宝书附录C）。通过求解对偶<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?q=%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3&zhida_source=entity&is_preview=1">问题求解</a>原始问题。</p>
+<p>首先，引入拉格朗日乘子 $\lambda_0, \lambda_1, \lambda_2,…, \lambda_n$， n 对应特征向量 $\boldsymbol{f}_{\tau}$ 中的特征个数，定义拉格朗日函数L(P,\boldsymbol{\lambda}):</p>
+<p>$$L(P,\boldsymbol{\lambda}) &#x3D;\sum_{\tau} P(\tau) \log P(\tau)+\lambda_0 (1-\sum_{\tau}P(\tau)) + \sum_{i&#x3D;1}^{n} \lambda_i (\tilde{f_i} - \sum_{\tau} P(\tau)f_{\tau, i})$$</p>
+<p>则原优化问题是（同样参考蓝宝书附录C）：</p>
+<p>$$\min_{P} \max_{\boldsymbol \lambda} L(P, \boldsymbol \lambda) (2)$$</p>
+<p>对偶问题是：</p>
+<p>$$\max_{\boldsymbol \lambda} \min_{P} L(P, \boldsymbol \lambda) (3)$$</p>
+<p>由于拉格朗日函数L(P,\boldsymbol{\lambda})是<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?q=%E5%87%B8%E5%87%BD%E6%95%B0&zhida_source=entity&is_preview=1">凸函数</a>，原始问题(2)的解与对偶问题(3)的解是等价的。这样，可以通过求解对偶问题来求解原始问题。</p>
+<p>首先求解对偶问题(3)内部的极小化问题 $\min_{P} L(P, \boldsymbol \lambda)$ 。 \min_{P} L(P, \boldsymbol \lambda) 是 \boldsymbol \lambda 的函数，将其记作</p>
+<p>$\Psi (\boldsymbol \lambda) &#x3D; \min_P L(P, \boldsymbol \lambda)&#x3D;L(P_{\boldsymbol \lambda}, \boldsymbol \lambda)$</p>
+<p>$\Psi (\boldsymbol \lambda)$称为对偶函数。同时将其解记作</p>
+<p>$$P_{\boldsymbol \lambda}&#x3D; \arg \min_P L(P, \boldsymbol \lambda)&#x3D;P_{\boldsymbol \lambda}(\tau)$$</p>
+<p>具体地，求 $L(P, \boldsymbol \lambda)$ 对 $P(\tau)$ 的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?q=%E5%81%8F%E5%AF%BC%E6%95%B0&zhida_source=entity&is_preview=1">偏导数</a></p>
+<p>$$\begin{align} \frac{\partial L(P, \boldsymbol \lambda)}{\partial P(\tau)} &amp; &#x3D; \sum_{\tau}(\log P(\tau)+1)-\sum_{\tau}\lambda_0-\sum_{i &#x3D; 1}^{n}\lambda_i \sum_{\tau}f_{\tau, i}\ &amp; &#x3D; \sum_{\tau}(\log P(\tau)+1-\lambda_0 -\sum <em>{i&#x3D;1}^{n} \lambda_i f</em>{\tau,i}) \end{align}$$</p>
+<p>令偏导数等于0，解得（这里为什么默认求和的每一项均等于零，还请大佬指点）</p>
+<p>$$\begin{align} P(\tau) &amp;&#x3D; \exp (\sum_{i&#x3D;1}^{n} \lambda_i f_{\tau,i} + \lambda_0 - 1)\ &amp;&#x3D; \frac {\exp (\sum_{i&#x3D;1}^{n} \lambda_i f_{\tau,i})}{\exp (1-\lambda_0)} \end{align} (4)$$</p>
+<p>结合 $\sum_{\tau} P(\tau)&#x3D;1$ ，消除 $\lambda_0$ 得</p>
+<p>$P_\boldsymbol{\lambda}(\tau) &#x3D; \frac{1}{Z_\boldsymbol{\lambda}(\tau)} \exp (\sum_{i&#x3D;1}^{n} \lambda_i f_{\tau,i}) (5)$</p>
+<p>其中， Z_\boldsymbol{\lambda}(\tau) &#x3D; \sum_{\tau} \exp(\sum_{i&#x3D;1}^{n} \lambda_i f_{\tau, i}) ，称为规范化因子； f_{\tau,i} 是特征函数； \lambda_i是特征的权值。由式(4)、式(5)表示的模型 P_\boldsymbol{\lambda} &#x3D;P_\boldsymbol{\lambda}(\tau) 就是最大熵模型。这里， \boldsymbol \lambda 是最大熵模型中的参数向量。</p>
+<p>之后，求解对偶问题外部的极大化问题</p>
+<p>\max_{\boldsymbol \lambda} \Psi(\boldsymbol \lambda)</p>
+<p>将其解记为 \boldsymbol \lambda ^ {\star} ，即</p>
+<p>\boldsymbol \lambda^{\star}&#x3D;\arg \max_{\boldsymbol \lambda} \Psi(\boldsymbol \lambda)</p>
+<p>可以证明，对偶函数的极大化等价于最大熵模型(5)的极大似然估计，即</p>
+<p>$\max_{\boldsymbol \lambda} \Psi(\boldsymbol \lambda) &#x3D; \max_{\boldsymbol{\lambda}} \sum_{\tau \in \mathcal{D}}\log P_{\boldsymbol{\lambda}}(\tau)$</p>
+<p>使用专家示例轨迹集，进行上述最大似然估计即可求得 $\boldsymbol{\lambda}$ ，从而得到奖励函数 $r(s)&#x3D;\boldsymbol{\lambda}^T \boldsymbol f(s)$ 。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://www.ericli.vip">Eric Li</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.ericli.vip/2024/09/25/IRL/Article%20Reading/zhihu%20512638348/">https://www.ericli.vip/2024/09/25/IRL/Article%20Reading/zhihu%20512638348/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/EldenRing.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/09/21/IRL/Article%20Reading/Maximum%20Entropy%20Inverse%20Reinforcement%20Learning/" title="Maximum Entropy Inverse Reinforcement Learning 论文阅读"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Maximum Entropy Inverse Reinforcement Learning 论文阅读</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/EldenRing.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Eric Li</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">62</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ericli2333"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ericli2333" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/25/IRL/Article%20Reading/zhihu%20512638348/" title="No title">No title</a><time datetime="2024-09-25T13:09:45.163Z" title="Created 2024-09-25 21:09:45">2024-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/21/IRL/Article%20Reading/Maximum%20Entropy%20Inverse%20Reinforcement%20Learning/" title="Maximum Entropy Inverse Reinforcement Learning 论文阅读">Maximum Entropy Inverse Reinforcement Learning 论文阅读</a><time datetime="2024-09-21T09:01:58.000Z" title="Created 2024-09-21 17:01:58">2024-09-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/12/Blogs/How%20to%20Install%20cmake-3.30%20in%20linux/" title="How to Install cmake-3.30">How to Install cmake-3.30</a><time datetime="2024-09-12T13:35:05.000Z" title="Created 2024-09-12 21:35:05">2024-09-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/04/Transformer/Transformer/" title="Transformer">Transformer</a><time datetime="2024-09-04T09:09:32.000Z" title="Created 2024-09-04 17:09:32">2024-09-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/27/Others/Regular%20expression/" title="正则表达式（regular expression）">正则表达式（regular expression）</a><time datetime="2024-08-27T09:54:08.000Z" title="Created 2024-08-27 17:54:08">2024-08-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/Ranni-1.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Eric Li</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><imgsrc="https://haiyong.site/img/icp.png"><a href="https://beian.miit.gov.cn/#/Integrated/index"  style="color:white" target="_blank">蜀ICP备2023025661号-1</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
