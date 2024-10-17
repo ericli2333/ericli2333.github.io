@@ -1,7 +1,6 @@
 https://www.ericli.vip/2024/10/17/IRL/Article%20Reading/TRPO/
 https://www.ericli.vip/2024/10/16/IRL/Article%20Reading/RLHF/
 https://www.ericli.vip/2024/03/13/RL/RLBook2020%20Learning/Policy%20Gradient%20Methods/
-https://www.ericli.vip/2024/10/16/IRL/Article%20Reading/DRLF/
 https://www.ericli.vip/2024/10/09/IRL/Article%20Reading/GAIL/
 https://www.ericli.vip/2024/10/14/Information%20theory/KL%20Divergence%20And%20JS%20Divergence/
 https://www.ericli.vip/2024/09/21/IRL/Article%20Reading/Maximum%20Entropy%20Inverse%20Reinforcement%20Learning/
