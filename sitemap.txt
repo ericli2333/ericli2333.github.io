@@ -102,6 +102,7 @@ https://www.ericli.vip/tags/LaTeX/
 https://www.ericli.vip/tags/Others/
 https://www.ericli.vip/tags/RegularExpression/
 https://www.ericli.vip/tags/cmake/
+https://www.ericli.vip/tags/Network/
 https://www.ericli.vip/tags/Transformer/
 https://www.ericli.vip/tags/IRL/
 https://www.ericli.vip/tags/InformationTheory/
@@ -125,6 +126,7 @@ https://www.ericli.vip/categories/LaTeX/
 https://www.ericli.vip/categories/Others/
 https://www.ericli.vip/categories/cmake/
 https://www.ericli.vip/categories/cmake/%E6%95%99%E7%A8%8B/
+https://www.ericli.vip/categories/Network/
 https://www.ericli.vip/categories/Transformer/
 https://www.ericli.vip/categories/Transformer/machine-learning/
 https://www.ericli.vip/categories/IRL/
