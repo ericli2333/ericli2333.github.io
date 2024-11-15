@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Blogs</title><meta name="author" content="Eric Li"><meta name="copyright" content="Eric Li"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Blogs">
+<meta property="og:url" content="https://www.ericli.vip/page/5/index.html">
+<meta property="og:site_name" content="Blogs">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.ericli.vip/img/OIP.jpg">
+<meta property="article:author" content="Eric Li">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.ericli.vip/img/OIP.jpg"><link rel="shortcut icon" href="/img/OIP.jpg"><link rel="canonical" href="https://www.ericli.vip/page/5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Blogs',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Blogs" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/OIP.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">28</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/fufu.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Blogs</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Blogs</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/ericli2333" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/27/DataStructure/Leftist%20heap/" title="Leftist Heap（左式堆）">Leftist Heap（左式堆）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-27T02:21:15.000Z" title="Created 2023-10-27 10:21:15">2023-10-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">Background在堆的合并中，仅仅只是拷贝都需要  的时间复杂度，所以希望提出一种更好的数据结构，让堆的合并的效率更高 Definition外节点只有一个儿子或没有儿子的节点，即左右儿子至少有一个为空节点的节点。 距离/零路长距离/零路径长 null path length ： 定义为 X 结点到它的后代中离它最近的外结点的最短路径长度，即两结点之间路径的权值和。特别的，外结点的距离为 0 ，空结点的距离为  。 左式堆左偏树/左式堆：一种满足左偏性质的堆有序的二叉树，其左偏性质体现在左儿子的距离大于等于右儿子的距离。即对于任意一个节点， 左式堆的距离左偏树/左式堆的距离：我们将一棵左偏树根结点的距离作为该树的距离。 合并操作 如果两个堆中有一个堆为空，就直接返回另一个堆。 否则为了合并两个堆，需要比较它们的根。 将具有大的根值的堆H2与具有小的根值的堆H1的右子堆H3合并得到一个新的左式堆，其中H2和H3的合并也采用同样的逻辑。    合并代码示例12345678910111213141516171819202122232425void...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/26/Cryptology/Message%20Authentication/" title="Message Authentication （消息认证）">Message Authentication （消息认证）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-26T11:46:17.000Z" title="Created 2023-10-26 19:46:17">2023-10-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Cryptology/">Cryptology</a></span></div><div class="content">Definition of MAC一个消息认证码(Message authentication code or MAC) 算法包括三个部分，即    Gen: 通过输入安全参数，输出一个 key，长度是  Mac: 生成认证码的算法，输入一个 key 和一个消息  然后输出一个tag: Vrfy: 通过输入k,m,t，判断消息是不是有效的(Valid) 如果是，输出1否则输出0  Secure MAC消息认证实验 通过  生成一个key 记为k，k对于攻击者是保密的 攻击者对于标签生成器 MAC 有神谕机的访问权限，可以获取多项式对  记所有的攻击者访问的明文的集合为   攻击者获胜当且仅当   如果攻击者获胜输出1，否则输出0整个实验记作    Plain secure如果一个标签算法是在选择明文攻击下不可伪造的(unforgeable) 当且仅当对于任意PPT的敌手，有 定义的缺陷攻击者可能可以给出以前已经认证过的消息一个新的标签，所以需要定义一个更强的安全性 Strong MACStrong unforgeable 实验 通过  生成一个key...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/26/Cryptology/Computational%20security,%20CPA%20security%20and%20CCA%20security/" title="Computational security, CPA security and CCA security">Computational security, CPA security and CCA security</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-26T08:14:55.000Z" title="Created 2023-10-26 16:14:55">2023-10-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Cryptology/">Cryptology</a></span></div><div class="content">negl 可忽视函数定义一个定义在自然数集上的非负函数  是可忽视的当且仅当对任意的正多项式  都存在一个自然数  使得对于任意的大于  的整数，满足  一个等价的定义： 如果对任意一个  满足  那么就是可忽视的 计算安全The Adeversarial indistinguishable experiment (计算安全实验)对于模式  实验  首先输入参数  攻击者  给出两个等长的明文  然后输出给加密算法 加密算法随机依据安全参数调用生成器 Gen 随机生成密钥 key 然后随机采样  加密  并把密文给到    输出一个   如果  那么  赢得这个实验，即  否则为0  计算安全定义如果上面的实验满足对于任意的PPT时间内的敌手，都有那么这个加密方式是满足 eav 不可区分的。 CPA 安全CPA安全实验 首先运行密钥生成器 Gen 生成一个密钥 key  攻击者有向加密器 Enc 加密长度为  神谕机访问权限，并且可以根据访问得到的明文-密文对决定输出一对消息  ，长度也是  的 加密算法随机生成一个bit，即随机采样  然后输出密文  给到  攻击者 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/26/Optimization/Conjugate%20Function/" title="Conjugate Function">Conjugate Function</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-26T06:43:47.000Z" title="Created 2023-10-26 14:43:47">2023-10-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Optimization/">Optimization</a></span></div><div class="content">Definition It’s conjugate（共轭） function is .  注意，这里其实  在输入之后是固定的，是平移  取到距离最远的点  Property  永远是凸函数  if  is convex and closed    如果  是凸的并且是可微的，那么$$f^*(y)  x^{T} \nabla f(x^) - f(x^*) = x^{*T} y -$$   </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/24/Cryptology/PRG%20and%20PRF/" title="PRG and PRF">PRG and PRF</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-24T13:47:29.000Z" title="Created 2023-10-24 21:47:29">2023-10-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Cryptology/">Cryptology</a></span></div><div class="content">PRGBackground提出的背景是生成真随机函数的速度太慢了，如果通过CPU温度来生成真随机，那么不能满足加密的速度要求，进而提出一种伪随机方法，来通过比较短的随机种子生成更长的随机串 Definition定义一个多项式  和一个确定的多项式时间的算法  ，对于输入  ， 输出一个长度为  的字符串，如果算法  满足以下性质，那么就称  是满足 PRG 的：  拓展性(Expansion):   对于任意PPT时间范围内的区分器  ,都有一个可忽略函数  使得其中的  均匀且随机，是真随机，而  是独立采样的，注意区分器是看不到  的，也不能看到  具体是什么 但是你构造反证的时候，是能够知道G的特征的，并且需要依据G的特殊性构造 这不是扯淡，因为你只需要证明存在一个D就可以了 ——By Danny    这里的实验分两种情况:  如果是走前半边，那么就是随机等可能从  里面采样出一个  出来，然后传给  输出一个数给判别器。 后半边是随机从  里面采样出一个  ，传给判别器  。  判别器  输出 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/24/DataStructure/Heap/" title="Heap">Heap</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-24T03:31:11.000Z" title="Created 2023-10-24 11:31:11">2023-10-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">堆的概念堆是满足一下性质的树：  堆中某个节点的值总是不大于或不小于其父节点的值 堆总是一棵完全二叉树  堆的分类根据堆的节点大小关系，分为大根堆和小根堆。大根堆中每个节点都比它的子节点大，小根堆则是每个节点都比它的两个子节点小 大根堆示意图 小根堆示意图 在数组中储存的下标特征在储存堆的时候，一个节点如果下标是  那么它的父节点的下标是  。左子节点的下标是  ，右子节点的下标是  。 堆的操作以下操作均以大根堆为例 堆的插入 每次把一个节点放到数组的最后 依次比较它和其父节点的值，如果父节点更小，那么使用 shift up 操作，把当前节点和父节点交换，然后向上递归 如果父节点已经比此时调整的调整节点大了，调整结束时间复杂度是  级别的。  堆的删除堆只支持删除堆顶端的元素  找到最后一个插入的元素 将最后一个元素和顶部的元素互换 向下递归调整进行 shift down  相关文章[[Leftist heap]] </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/19/Optimization/Operations%20that%20preserve%20convexity/" title="保凸运算">保凸运算</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-19T07:05:30.000Z" title="Created 2023-10-19 15:05:30">2023-10-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Optimization/">Optimization</a></span></div><div class="content">Nonnegative Weighted sumsFinite sums ,  is convex  is convex  Infinite sums略 Composition with an affine mapping    Affine mappingsholds convexity  Pointwise Maximum is convexis convex Proof is simple. Compositions h,g are convex  is convex in some conditions &lt;!–TODO: finish convex conditions&gt;  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/19/Optimization/Inequality/" title="Inequality">Inequality</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-19T06:46:56.000Z" title="Created 2023-10-19 14:46:56">2023-10-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Optimization/">Optimization</a></span></div><div class="content">Jensen’s InequalityDefinitionInfinite points  ,  ,     Exceptionif function  is convex, then </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/19/Optimization/Epigraph/" title="Epigraoh">Epigraoh</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-19T06:32:16.000Z" title="Created 2023-10-19 14:32:16">2023-10-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Optimization/">Optimization</a></span></div><div class="content">次水平集和超水平集次水平集定义对于  的次水平集是 性质  是凸的   是凸的 但是反过来不成立  超水平集定义对于  的超水平集是 性质  是 concave   是 convex  DefinitionDefine the epigraph of function  as Property  is convex   is convex  is convex   is concave  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/19/Optimization/Sublevel%20and%20superlevel%20set/" title="Sublevel and Superlevel set">Sublevel and Superlevel set</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-10-19T06:30:48.000Z" title="Created 2023-10-19 14:30:48">2023-10-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Optimization/">Optimization</a></span></div><div class="content">Sublevel setsDefinitionif  is convex   is convex Superlevel setsDefinitionif  is concave   is convex </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/4/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/6/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/OIP.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Eric Li</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">28</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ericli2333"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ericli2333" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">The blog is now under construction</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/13/CV/Coordinates/" title="3D基础-坐标系">3D基础-坐标系</a><time datetime="2024-11-13T07:08:32.000Z" title="Created 2024-11-13 15:08:32">2024-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/04/Blogs/Using%20acme.sh%20to%20get%20a%20certificate/" title="使用acme.sh获取证书">使用acme.sh获取证书</a><time datetime="2024-11-04T05:58:21.000Z" title="Created 2024-11-04 13:58:21">2024-11-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/03/Internet/Application%20Layer/" title="Application Layer">Application Layer</a><time datetime="2024-11-03T07:08:47.000Z" title="Created 2024-11-03 15:08:47">2024-11-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/01/Internet/Network%20Overview/" title="Network Overview">Network Overview</a><time datetime="2024-11-01T13:43:20.000Z" title="Created 2024-11-01 21:43:20">2024-11-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/01/DataBase/SQL%20Language/" title="SQL Language">SQL Language</a><time datetime="2024-11-01T07:48:13.000Z" title="Created 2024-11-01 15:48:13">2024-11-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Algorithm/"><span class="card-category-list-name">Algorithm</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Article-Reading/"><span class="card-category-list-name">Article_Reading</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Article-Reading/reinforcement-learning/"><span class="card-category-list-name">reinforcement_learning</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CV/"><span class="card-category-list-name">CV</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Cryptology/"><span class="card-category-list-name">Cryptology</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/DB/"><span class="card-category-list-name">DB</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ICS/"><span class="card-category-list-name">ICS</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/IRL/"><span class="card-category-list-name">IRL</span><span class="card-category-list-count">4</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/RegularExpression/" style="font-size: 1.1em; color: #999">RegularExpression</a> <a href="/tags/latex/" style="font-size: 1.1em; color: #999">latex</a> <a href="/tags/InformationTheory/" style="font-size: 1.1em; color: #999">InformationTheory</a> <a href="/tags/SQL/" style="font-size: 1.1em; color: #999">SQL</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/Cryptology/" style="font-size: 1.37em; color: #99a4b2">Cryptology</a> <a href="/tags/cmake/" style="font-size: 1.1em; color: #999">cmake</a> <a href="/tags/termux/" style="font-size: 1.1em; color: #999">termux</a> <a href="/tags/wsl/" style="font-size: 1.1em; color: #999">wsl</a> <a href="/tags/certbot/" style="font-size: 1.1em; color: #999">certbot</a> <a href="/tags/3D/" style="font-size: 1.1em; color: #999">3D</a> <a href="/tags/VSCode/" style="font-size: 1.1em; color: #999">VSCode</a> <a href="/tags/LaTeX/" style="font-size: 1.1em; color: #999">LaTeX</a> <a href="/tags/Probability-Theory/" style="font-size: 1.17em; color: #999c9f">Probability_Theory</a> <a href="/tags/Optimization/" style="font-size: 1.43em; color: #99a6b9">Optimization</a> <a href="/tags/Network/" style="font-size: 1.23em; color: #999ea6">Network</a> <a href="/tags/Transformer/" style="font-size: 1.1em; color: #999">Transformer</a> <a href="/tags/server/" style="font-size: 1.37em; color: #99a4b2">server</a> <a href="/tags/cpp/" style="font-size: 1.1em; color: #999">cpp</a> <a href="/tags/m%E8%B7%AF%E6%90%9C%E7%B4%A2%E6%A0%91/" style="font-size: 1.1em; color: #999">m路搜索树</a> <a href="/tags/RBT/" style="font-size: 1.1em; color: #999">RBT</a> <a href="/tags/notes/" style="font-size: 1.5em; color: #99a9bf">notes</a> <a href="/tags/AVL/" style="font-size: 1.1em; color: #999">AVL</a> <a href="/tags/OS/" style="font-size: 1.17em; color: #999c9f">OS</a> <a href="/tags/DB/" style="font-size: 1.1em; color: #999">DB</a> <a href="/tags/B%E6%A0%91/" style="font-size: 1.1em; color: #999">B树</a> <a href="/tags/config/" style="font-size: 1.3em; color: #99a1ac">config</a> <a href="/tags/texlive/" style="font-size: 1.1em; color: #999">texlive</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/CV/" style="font-size: 1.1em; color: #999">CV</a> <a href="/tags/gitlab/" style="font-size: 1.17em; color: #999c9f">gitlab</a> <a href="/tags/Integral/" style="font-size: 1.1em; color: #999">Integral</a> <a href="/tags/IRL/" style="font-size: 1.3em; color: #99a1ac">IRL</a> <a href="/tags/Math/" style="font-size: 1.1em; color: #999">Math</a> <a href="/tags/ICS/" style="font-size: 1.1em; color: #999">ICS</a> <a href="/tags/Algorithm/" style="font-size: 1.17em; color: #999c9f">Algorithm</a> <a href="/tags/Others/" style="font-size: 1.1em; color: #999">Others</a> <a href="/tags/gitlab-ci/" style="font-size: 1.1em; color: #999">gitlab-ci</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/ssl/" style="font-size: 1.17em; color: #999c9f">ssl</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/" title="View More"><i class="fas fa-angle-right"></i></a>
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">November 2024</span>
+          <span class="card-archive-list-count">5</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">October 2024</span>
+          <span class="card-archive-list-count">5</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/09/">
+          <span class="card-archive-list-date">September 2024</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/08/">
+          <span class="card-archive-list-date">August 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/07/">
+          <span class="card-archive-list-date">July 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/06/">
+          <span class="card-archive-list-date">June 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/05/">
+          <span class="card-archive-list-date">May 2024</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/04/">
+          <span class="card-archive-list-date">April 2024</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">71</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-11-15T11:44:42.062Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Eric Li</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><imgsrc="https://haiyong.site/img/icp.png"><a href="https://beian.miit.gov.cn/#/Integrated/index"  style="color:white" target="_blank">蜀ICP备2023025661号-1</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["循此苦旅，以达繁星","Per Aspera Ad Astra"])
+  } else {
+    document.getElementById("subtitle").textContent = "循此苦旅，以达繁星"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
