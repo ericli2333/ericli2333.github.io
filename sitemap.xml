@@ -2,9 +2,135 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20one%20dimension/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20two%20dimension/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/11/02/Probability%20Theory/Useful%20Results/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/06/07/LaTeX/How%20to%20use%20LaTeX%20elegantly/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/09/28/Math/Integral/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ericli.vip/2024/11/01/Internet/Network%20Overview/</loc>
     
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/10/14/Information%20theory/KL%20Divergence%20And%20JS%20Divergence/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/09/21/IRL/Article%20Reading/Maximum%20Entropy%20Inverse%20Reinforcement%20Learning/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/10/17/IRL/Article%20Reading/TRPO/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/11/03/Internet/Application%20Layer/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/24/Cryptology/PRG%20and%20PRF/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/10/09/IRL/Article%20Reading/GAIL/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/11/13/CV/Coordinates/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2023/10/09/Blogs/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAVSCode%E7%8E%AF%E5%A2%83%E7%BC%96%E5%86%99c-%E4%BB%A3%E7%A0%81/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/2024/11/04/Blogs/Using%20acme.sh%20to%20get%20a%20certificate/</loc>
+    
+    <lastmod>2024-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +139,7 @@
   <url>
     <loc>https://www.ericli.vip/2024/10/27/Internet/Transport%20Layer/</loc>
     
-    <lastmod>2024-11-01</lastmod>
+    <lastmod>2024-11-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +148,7 @@
   <url>
     <loc>https://www.ericli.vip/2024/11/01/DataBase/SQL%20Language/</loc>
     
-    <lastmod>2024-11-01</lastmod>
+    <lastmod>2024-11-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -65,15 +191,6 @@
   </url>
   
   <url>
-    <loc>https://www.ericli.vip/2024/10/17/IRL/Article%20Reading/TRPO/</loc>
-    
-    <lastmod>2024-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ericli.vip/2024/10/16/IRL/Article%20Reading/RLHF/</loc>
     
     <lastmod>2024-10-16</lastmod>
@@ -86,42 +203,6 @@
     <loc>https://www.ericli.vip/2024/03/13/RL/RLBook2020%20Learning/Policy%20Gradient%20Methods/</loc>
     
     <lastmod>2024-10-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2024/10/09/IRL/Article%20Reading/GAIL/</loc>
-    
-    <lastmod>2024-10-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2024/10/14/Information%20theory/KL%20Divergence%20And%20JS%20Divergence/</loc>
-    
-    <lastmod>2024-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2024/09/21/IRL/Article%20Reading/Maximum%20Entropy%20Inverse%20Reinforcement%20Learning/</loc>
-    
-    <lastmod>2024-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2024/06/07/LaTeX/How%20to%20use%20LaTeX%20elegantly/</loc>
-    
-    <lastmod>2024-09-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -317,15 +398,6 @@
   </url>
   
   <url>
-    <loc>https://www.ericli.vip/2023/09/28/Math/Integral/</loc>
-    
-    <lastmod>2024-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ericli.vip/2023/09/28/Algorithm/Disjoint%20Set%20Union/</loc>
     
     <lastmod>2024-03-02</lastmod>
@@ -425,24 +497,6 @@
   </url>
   
   <url>
-    <loc>https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20one%20dimension/</loc>
-    
-    <lastmod>2023-11-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/11/02/Probability%20Theory/Useful%20Results/</loc>
-    
-    <lastmod>2023-11-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ericli.vip/2023/10/30/Probability%20Theory/Expectation/</loc>
     
     <lastmod>2023-10-31</lastmod>
@@ -452,25 +506,7 @@
   </url>
   
   <url>
-    <loc>https://www.ericli.vip/2023/10/29/Probability%20Theory/Common%20probability%20distributions%20in%20two%20dimension/</loc>
-    
-    <lastmod>2023-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ericli.vip/2023/10/26/Cryptology/Computational%20security,%20CPA%20security%20and%20CCA%20security/</loc>
-    
-    <lastmod>2023-10-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/24/Cryptology/PRG%20and%20PRF/</loc>
     
     <lastmod>2023-10-29</lastmod>
     
@@ -534,15 +570,6 @@
   
   <url>
     <loc>https://www.ericli.vip/2023/09/28/Blogs/%E5%9C%A8wsl%E4%B8%8A%E5%AE%89%E8%A3%85texlive/</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ericli.vip/2023/10/09/Blogs/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAVSCode%E7%8E%AF%E5%A2%83%E7%BC%96%E5%86%99c-%E4%BB%A3%E7%A0%81/</loc>
     
     <lastmod>2023-10-24</lastmod>
     
@@ -652,7 +679,7 @@
 
   <url>
     <loc>https://www.ericli.vip/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -660,280 +687,301 @@
   
   <url>
     <loc>https://www.ericli.vip/tags/Algorithm/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/notes/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Cryptology/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/AVL/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/B%E6%A0%91/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/cmake/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/RBT/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/m%E8%B7%AF%E6%90%9C%E7%B4%A2%E6%A0%91/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/termux/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/config/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/certbot/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/ssl/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/server/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/wsl/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/texlive/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/latex/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/hexo/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/gitlab/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/gitlab-ci/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/frp/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/VSCode/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/cpp/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/OS/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/InformationTheory/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/git/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/ICS/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/LaTeX/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Optimization/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Integral/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Math/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Probability-Theory/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Others/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/RegularExpression/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Transformer/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/RL/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/IRL/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/DB/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/SQL/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/MySQL/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/tags/Network/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/tags/CV/</loc>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/tags/3D/</loc>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/tags/acme/</loc>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -942,182 +990,196 @@
   
   <url>
     <loc>https://www.ericli.vip/categories/Algorithm/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Cryptology/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/cmake/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/OS/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/cmake/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/InformationTheory/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/ICS/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/LaTeX/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Optimization/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/hexo/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/%E6%95%99%E7%A8%8B/server/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Math/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Probability-Theory/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Others/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Transformer/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Article-Reading/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/reinforcement-learning/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/IRL/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Transformer/machine-learning/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Article-Reading/reinforcement-learning/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/reinforcement-learning/Article-Reading/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/DB/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.ericli.vip/categories/Network/</loc>
-    <lastmod>2024-11-02</lastmod>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/categories/CV/</loc>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ericli.vip/categories/server/</loc>
+    <lastmod>2024-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
