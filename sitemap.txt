@@ -1,3 +1,4 @@
+https://www.ericli.vip/2024/11/20/Diffusion/DDPM/
 https://www.ericli.vip/2024/09/04/Transformer/Transformer/
 https://www.ericli.vip/2024/03/06/RL/RLBook2020%20Learning/Temporal-Difference%20Learning/
 https://www.ericli.vip/2024/02/28/RL/RLBook2020%20Learning/Tabular%20Solution%20Methods/
@@ -118,6 +119,7 @@ https://www.ericli.vip/tags/Network/
 https://www.ericli.vip/tags/CV/
 https://www.ericli.vip/tags/3D/
 https://www.ericli.vip/tags/acme/
+https://www.ericli.vip/tags/Diffusion/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/Cryptology/
 https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
@@ -146,3 +148,4 @@ https://www.ericli.vip/categories/DB/
 https://www.ericli.vip/categories/Network/
 https://www.ericli.vip/categories/CV/
 https://www.ericli.vip/categories/server/
+https://www.ericli.vip/categories/Diffusion/
