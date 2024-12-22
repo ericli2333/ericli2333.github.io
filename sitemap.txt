@@ -1,3 +1,6 @@
+https://www.ericli.vip/2024/11/16/Internet/Network%20Layer/
+https://www.ericli.vip/2024/12/22/Fla/Pumping%20Lemma/
+https://www.ericli.vip/2024/12/20/Fla/P%20and%20NP,%20Decidable%20and%20RE/
 https://www.ericli.vip/2024/11/20/Diffusion/DDPM/
 https://www.ericli.vip/2024/09/04/Transformer/Transformer/
 https://www.ericli.vip/2024/03/06/RL/RLBook2020%20Learning/Temporal-Difference%20Learning/
@@ -27,7 +30,6 @@ https://www.ericli.vip/2023/10/13/Optimization/Convex%20Functions/
 https://www.ericli.vip/2023/10/26/Optimization/Conjugate%20Function/
 https://www.ericli.vip/2023/10/13/Optimization/Cone/
 https://www.ericli.vip/2024/10/16/IRL/Article%20Reading/RLHF/
-https://www.ericli.vip/2024/11/16/Internet/Network%20Layer/
 https://www.ericli.vip/2023/10/28/ICS%20and%20OS/The%20call%20of%20function/
 https://www.ericli.vip/2024/07/10/ICS%20and%20OS/OS-L%20%20experimemt%20report/
 https://www.ericli.vip/2024/04/30/ICS%20and%20OS/Concurrenct%20Programming/
@@ -120,6 +122,7 @@ https://www.ericli.vip/tags/CV/
 https://www.ericli.vip/tags/3D/
 https://www.ericli.vip/tags/acme/
 https://www.ericli.vip/tags/Diffusion/
+https://www.ericli.vip/tags/fla/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/Cryptology/
 https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
@@ -149,3 +152,4 @@ https://www.ericli.vip/categories/Network/
 https://www.ericli.vip/categories/CV/
 https://www.ericli.vip/categories/server/
 https://www.ericli.vip/categories/Diffusion/
+https://www.ericli.vip/categories/fla/
