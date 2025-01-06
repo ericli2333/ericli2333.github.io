@@ -1,3 +1,4 @@
+https://www.ericli.vip/2024/03/02/RL/RLBook2020%20Learning/Finite%20Markov%20Decision/
 https://www.ericli.vip/2025/01/04/Blogs/Artificial%20Intelligence%20Review%20Note/
 https://www.ericli.vip/2024/12/20/Fla/P%20and%20NP,%20Decidable%20and%20RE/
 https://www.ericli.vip/2024/09/04/Transformer/Transformer/
@@ -8,7 +9,6 @@ https://www.ericli.vip/2024/03/10/RL/RLBook2020%20Learning/On-policy%20Predictio
 https://www.ericli.vip/2024/03/12/RL/RLBook2020%20Learning/On-policy%20Control%20with%20Approximation/
 https://www.ericli.vip/2024/03/05/RL/RLBook2020%20Learning/Monte%20Carlo%20Methods/
 https://www.ericli.vip/2024/02/28/RL/RLBook2020%20Learning/Introduction/
-https://www.ericli.vip/2024/03/02/RL/RLBook2020%20Learning/Finite%20Markov%20Decision/
 https://www.ericli.vip/2024/03/03/RL/RLBook2020%20Learning/Dynamic%20Programming/
 https://www.ericli.vip/2024/03/21/RL/Learning%20Notes/Tmux%20usage/
 https://www.ericli.vip/2024/03/20/RL/Learning%20Notes/Environment%20Configuration/
