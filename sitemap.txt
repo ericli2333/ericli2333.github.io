@@ -1,3 +1,4 @@
+https://www.ericli.vip/2025/01/04/Blogs/Artificial%20Intelligence%20Review%20Note/
 https://www.ericli.vip/2024/12/20/Fla/P%20and%20NP,%20Decidable%20and%20RE/
 https://www.ericli.vip/2024/09/04/Transformer/Transformer/
 https://www.ericli.vip/2024/03/06/RL/RLBook2020%20Learning/Temporal-Difference%20Learning/
@@ -123,6 +124,7 @@ https://www.ericli.vip/tags/3D/
 https://www.ericli.vip/tags/acme/
 https://www.ericli.vip/tags/Diffusion/
 https://www.ericli.vip/tags/fla/
+https://www.ericli.vip/tags/AI/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/Cryptology/
 https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
@@ -153,3 +155,4 @@ https://www.ericli.vip/categories/CV/
 https://www.ericli.vip/categories/server/
 https://www.ericli.vip/categories/Diffusion/
 https://www.ericli.vip/categories/fla/
+https://www.ericli.vip/categories/AI/
