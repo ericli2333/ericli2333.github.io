@@ -1,5 +1,7 @@
 https://www.ericli.vip/2024/03/02/RL/RLBook2020%20Learning/Finite%20Markov%20Decision/
 https://www.ericli.vip/2024/03/13/RL/RLBook2020%20Learning/Policy%20Gradient%20Methods/
+https://www.ericli.vip/2025/06/05/Blogs/Hydra%20Learning/
+https://www.ericli.vip/2025/05/23/Article%20Reading%20Notes/Learning%20Combinatorial%20Optimization%20Algorithms%20over%20Graphs/
 https://www.ericli.vip/2024/02/28/RL/RLBook2020%20Learning/Tabular%20Solution%20Methods/
 https://www.ericli.vip/2024/12/20/Fla/P%20and%20NP,%20Decidable%20and%20RE/
 https://www.ericli.vip/2024/11/01/Internet/Network%20Overview/
@@ -138,6 +140,9 @@ https://www.ericli.vip/tags/RL/
 https://www.ericli.vip/tags/Diffusion/
 https://www.ericli.vip/tags/AI/
 https://www.ericli.vip/tags/fla/
+https://www.ericli.vip/tags/Article/
+https://www.ericli.vip/tags/Hydra/
+https://www.ericli.vip/tags/Python/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/cmake/
 https://www.ericli.vip/categories/server/
@@ -170,3 +175,5 @@ https://www.ericli.vip/categories/Diffusion/
 https://www.ericli.vip/categories/AI/
 https://www.ericli.vip/categories/fla/
 https://www.ericli.vip/categories/RL/
+https://www.ericli.vip/categories/NCO/
+https://www.ericli.vip/categories/Python/
