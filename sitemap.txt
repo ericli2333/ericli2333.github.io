@@ -1,3 +1,4 @@
+https://www.ericli.vip/2025/10/26/tools/PythonPackages/
 https://www.ericli.vip/2023/10/29/Bachelor/Probability%20Theory/Common%20probability%20distributions%20in%20two%20dimension/
 https://www.ericli.vip/2024/10/09/RL%20and%20IRL/IRL/Article%20Reading/GAIL/
 https://www.ericli.vip/2024/03/13/RL%20and%20IRL/RL/RLBook2020%20Learning/Policy%20Gradient%20Methods/
@@ -10,7 +11,6 @@ https://www.ericli.vip/2023/10/24/Bachelor/DataStructure/Heap/
 https://www.ericli.vip/2023/10/13/Bachelor/DataStructure/B%20Tree/
 https://www.ericli.vip/2023/10/24/Bachelor/Cryptology/PRG%20and%20PRF/
 https://www.ericli.vip/2023/10/26/Bachelor/Cryptology/Computational%20security,%20CPA%20security%20and%20CCA%20security/
-https://www.ericli.vip/2025/10/26/tools/PythonPackages/
 https://www.ericli.vip/2025/10/26/Welcome/
 https://www.ericli.vip/2024/09/04/Article%20Reading%20Notes/Transformer/Transformer/
 https://www.ericli.vip/2024/03/18/RL%20and%20IRL/RL/Article%20Reading/DQN/

@@ -42,15 +42,14 @@
     <link href="https://www.ericli.vip/2025/10/26/tools/PythonPackages/"/>
     <id>https://www.ericli.vip/2025/10/26/tools/PythonPackages/</id>
     <published>2025-10-26T13:28:18.000Z</published>
-    <updated>2025-10-26T13:41:48.282Z</updated>
+    <updated>2025-10-26T14:50:21.109Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="UV工具简介"><a href="#UV工具简介" class="headerlink" title="UV工具简介"></a>UV工具简介</h1><p><code>uv</code> 是一款基于项目的包管理器，本人非常推荐使用</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="UV工具简介"><a href="#UV工具简介" class="headerlink" title="UV工具简介"></a>UV工具简介</h1><p><code>uv</code> 是一款基于项目的包管理器，本人非常推荐使用，因为它默认的配置是基于 <code>pyproject.toml</code> 进行的，这是Python官方推荐的新一代依赖管理方式，并且可以非常简单地进行打包和自安装，可以直接使用 <code>src layout</code> 使用项目名称作为顶级包名进行导入，避免手动添加 <code>sys.path</code> 更加优雅不会出错</p><h2 id="什么是-src-layout"><a href="#什么是-src-layout" class="headerlink" title="什么是 src layout"></a>什么是 <code>src layout</code></h2><p>简单来说，项目的结构是 </p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">project_xxx</span><br><span class="line">|-src</span><br><span class="line">|  |--project_xxx</span><br><span class="line">|-pyproject.toml</span><br></pre></td></tr></table></figure><p>在这种layout下面，可以定义打包 <code>src/</code> 目录下面的东西，然后使用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -e .</span><br></pre></td></tr></table></figure><p>以可编辑的方式安装自己，即可自动安装所有依赖，并且使用 <code>project_xxx.xxx</code> 这种方式来导入项目中的包</p><h2 id="uv-的安装和基本命令"><a href="#uv-的安装和基本命令" class="headerlink" title="uv 的安装和基本命令"></a><code>uv</code> 的安装和基本命令</h2><p>TBD</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;UV工具简介&quot;&gt;&lt;a href=&quot;#UV工具简介&quot; class=&quot;headerlink&quot; title=&quot;UV工具简介&quot;&gt;&lt;/a&gt;UV工具简介&lt;/h1&gt;&lt;p&gt;&lt;code&gt;uv&lt;/code&gt; 是一款基于项目的包管理器，本人非常推荐使用&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;UV工具简介&quot;&gt;&lt;a href=&quot;#UV工具简介&quot; class=&quot;headerlink&quot; title=&quot;UV工具简介&quot;&gt;&lt;/a&gt;UV工具简介&lt;/h1&gt;&lt;p&gt;&lt;code&gt;uv&lt;/code&gt; 是一款基于项目的包管理器，本人非常推荐使用，因为它默认的配置是基于 &lt;cod</summary>
       
     
     
