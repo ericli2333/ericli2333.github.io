@@ -75,7 +75,6 @@ https://www.ericli.vip/2024/12/23/Bachelor/DataBase/DB%20Takeaway%20Notes/
 https://www.ericli.vip/2025/01/07/Bachelor/DataBase/Database%20Review/
 https://www.ericli.vip/2024/11/01/Bachelor/DataBase/SQL%20Language/
 https://www.ericli.vip/2024/11/13/Article%20Reading%20Notes/CV/Coordinates/
-https://www.ericli.vip/2025/10/26/Doctor/CO/Simplex/
 https://www.ericli.vip/2023/10/07/tools/Blogs/%E5%A6%82%E4%BD%95%E6%8A%8Ahexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/
 https://www.ericli.vip/2023/09/28/tools/Blogs/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cgitlab-ci%E5%8F%91%E5%B8%83%E8%BD%AF%E4%BB%B6%E5%8C%85/
 https://www.ericli.vip/2023/09/28/tools/Blogs/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/
