@@ -6,7 +6,7 @@
   <link href="https://www.ericli.vip/atom.xml" rel="self"/>
   
   <link href="https://www.ericli.vip/"/>
-  <updated>2025-10-26T13:41:48.081Z</updated>
+  <updated>2025-10-27T12:41:50.486Z</updated>
   <id>https://www.ericli.vip/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ecole环境安装指南</title>
+    <link href="https://www.ericli.vip/2025/10/27/Doctor/CO/ecole-install-guaidance/"/>
+    <id>https://www.ericli.vip/2025/10/27/Doctor/CO/ecole-install-guaidance/</id>
+    <published>2025-10-27T12:36:24.000Z</published>
+    <updated>2025-10-27T12:41:50.486Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>ecole</code> 是用于生成milp合成数据集的一个库，亦有其他功能。官方的安装提示是：[ecole install](<a href="https://doc.ecole.ai/py/en/stable/installation.html">Installation — Ecole 0.8.1 documentation</a>)</p><p>但是事实上你如果真的直接按照它的命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge ecole pyscipopt</span><br></pre></td></tr></table></figure><p>安装 <code>ecole</code> 那么你会发现再import的时候报错找不到 <code>scip.8.so</code> 这种错误，这是由于时代变迁，这里依赖的库不能直接通过pyscipopt正确安装了</p><h1 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h1><p>下面首先提供一个可以一键安装并且能够正确处理依赖的 <code>conda-env.yaml</code></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">ecole-env</span></span><br><span class="line"><span class="attr">channels:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">conda-forge</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">defaults</span></span><br><span class="line"><span class="attr">dependencies:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">numpy=1.24.3</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">scip=8.0.0</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">python=3.10</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">pyscipopt</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">ecole</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>直接使用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="built_in">env</span> create -f xxx.yaml</span><br></pre></td></tr></table></figure><p>即可</p><p>如果你想要再现有环境中安装，记得先安装1.x版本的numpy，再安装 <code>scip==8.0.0</code> 然后安装<code>pyscipopt</code>和<code>ecole</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;code&gt;ecole&lt;/code&gt; 是用于生成milp合成数据集的一个库，亦有其他功能。官方的安装提示是：[ecole install](</summary>
+      
+    
+    
+    
+    <category term="NCO" scheme="https://www.ericli.vip/categories/NCO/"/>
+    
+    
+    <category term="tools" scheme="https://www.ericli.vip/tags/tools/"/>
+    
+    <category term="co" scheme="https://www.ericli.vip/tags/co/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -479,32 +505,6 @@
     
     
     <category term="Network" scheme="https://www.ericli.vip/tags/Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用acme.sh获取证书</title>
-    <link href="https://www.ericli.vip/2024/11/04/tools/Blogs/Using%20acme.sh%20to%20get%20a%20certificate/"/>
-    <id>https://www.ericli.vip/2024/11/04/tools/Blogs/Using%20acme.sh%20to%20get%20a%20certificate/</id>
-    <published>2024-11-04T05:58:21.000Z</published>
-    <updated>2025-10-26T13:41:48.055Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="官网地址"><a href="#官网地址" class="headerlink" title="官网地址"></a>官网地址</h1><p>官方的地址是 <a href="https://github.com/acmesh-official/acme.sh">acmesh-official/acme.sh</a></p><h1 id="如何安装-acme-sh"><a href="#如何安装-acme-sh" class="headerlink" title="如何安装 acme.sh"></a>如何安装 acme.sh</h1><p>官方的安装方式是</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://get.acme.sh | sh -s email=my@example.com</span><br></pre></td></tr></table></figure><p>在国内如果因为网络环境安装失败，可以参考官方的教程<a href="https://github.com/acmesh-official/acme.sh/wiki/Install-in-China">Install in China · acmesh-official/acme.sh Wiki</a></p><p>记得在你的 <code>~/.bashrc</code> 里面加一条 <code>alias acme.sh=~/.acme.sh/acme.sh</code> 这样就可以直接使用命令 <code>acme.sh</code> 来调用了</p><h1 id="如何申请"><a href="#如何申请" class="headerlink" title="如何申请"></a>如何申请</h1><p>这里我开始尝试直接用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --issue -d mydomain.com --nginx</span><br></pre></td></tr></table></figure><p>来申请证书，但是它告诉我我的 <code>nginx</code> 配置有问题，查阅英文版本的readme发现，应当使用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --issue  -d www.ericli.vip  --nginx /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure><p>这样就可以正常获取了，但是这时候我遇到了一个问题，之前我用的是 <code>certbot</code> 来获取证书，这玩意需要 <code>sudo</code> 权限，所以当时我的nginx配置如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">server {</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name ericli.vip www.ericli.vip;</span><br><span class="line">        ssl_certificate       /etc/letsencrypt/live/www.ericli.vip/fullchain.pem;</span><br><span class="line">        ssl_certificate_key   /etc/letsencrypt/live/www.ericli.vip/privkey.pem;</span><br><span class="line">        root /var/www/hexo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure><p>而这个路径普通用户不可读，所以运行上面的指令会报错</p><p>于是我选择换命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --issue -d ericli.vip -d www.ericli.vip --webroot /var/www/hexo</span><br></pre></td></tr></table></figure><p>用这个命令来获取证书</p><blockquote><p>注意，这样获取的证书是放在  <code>~/.acme.sh/ericli.vip/</code> 下面的，而不是 <code>~/.acme.sh/www.ericli.vip/</code> 下面</p></blockquote><h1 id="安装证书"><a href="#安装证书" class="headerlink" title="安装证书"></a>安装证书</h1><p>官方不建议直接使用 <code>~/.acme.sh/xxx</code> 下面的证书，因为这里面的目录结构可能发生改变，所以推荐的方式是使用命令 <code>acme.sh --install</code> 系列来安装证书到另外的路径</p><p>这里我选择创建路径 <code>~/certs/www.ericli.vip/</code> 来存这里申请的证书，使用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/certs/xxx.example.com</span><br></pre></td></tr></table></figure><p>创建对应的路径，然后使用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --install-cert -d ericli.vip \</span><br><span class="line">--key-file       /home/eric/certs/www.ericli.vip/key.pem  \</span><br><span class="line">--fullchain-file /home/eric/certs/www.ericli.vip/cert.pem \</span><br><span class="line">--reloadcmd     <span class="string">"service nginx force-reload"</span></span><br></pre></td></tr></table></figure><h2 id="修改-Nginx-配置文件"><a href="#修改-Nginx-配置文件" class="headerlink" title="修改 Nginx 配置文件"></a>修改 <code>Nginx</code> 配置文件</h2><p>修改nginx里面ssl相关配置，例如我的配置：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">server {</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name ericli.vip www.ericli.vip;</span><br><span class="line">        ssl_certificate       /home/eric/certs/www.ericli.vip/cert.pem;</span><br><span class="line">        ssl_certificate_key  /home/eric/certs/www.ericli.vip/key.pem;</span><br><span class="line">        root /var/www/hexo;</span><br><span class="line">}</span><br></pre></td></tr></table></figure><h1 id="检查自动更新证书是否正确配置"><a href="#检查自动更新证书是否正确配置" class="headerlink" title="检查自动更新证书是否正确配置"></a>检查自动更新证书是否正确配置</h1><p>使用命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab  -l</span><br></pre></td></tr></table></figure><p>应该能够看到形如</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">22 0 * * * <span class="string">"/home/eric/.acme.sh"</span>/acme.sh --cron --home <span class="string">"/home/eric/.acme.sh"</span> &gt; /dev/null</span><br></pre></td></tr></table></figure><p>的东西，这样就说明自动更新配置成功了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;官网地址&quot;&gt;&lt;a href=&quot;#官网地址&quot; class=&quot;headerlink&quot; title=&quot;官网地址&quot;&gt;&lt;/a&gt;官网地址&lt;/h1&gt;&lt;p&gt;官方的地址是 &lt;a href=&quot;https://github.com/acmesh-official/acme.sh&quot;&gt;ac</summary>
-      
-    
-    
-    
-    <category term="server" scheme="https://www.ericli.vip/categories/server/"/>
-    
-    
-    <category term="ssl" scheme="https://www.ericli.vip/tags/ssl/"/>
-    
-    <category term="acme" scheme="https://www.ericli.vip/tags/acme/"/>
     
   </entry>
   

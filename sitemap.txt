@@ -1,3 +1,4 @@
+https://www.ericli.vip/2025/10/27/Doctor/CO/ecole-install-guaidance/
 https://www.ericli.vip/2025/10/26/tools/PythonPackages/
 https://www.ericli.vip/2023/10/29/Bachelor/Probability%20Theory/Common%20probability%20distributions%20in%20two%20dimension/
 https://www.ericli.vip/2024/10/09/RL%20and%20IRL/IRL/Article%20Reading/GAIL/
@@ -147,6 +148,8 @@ https://www.ericli.vip/tags/UV/
 https://www.ericli.vip/tags/Conda/
 https://www.ericli.vip/tags/Hydra/
 https://www.ericli.vip/tags/Python/
+https://www.ericli.vip/tags/tools/
+https://www.ericli.vip/tags/co/
 https://www.ericli.vip/categories/Algorithm/
 https://www.ericli.vip/categories/Cryptology/
 https://www.ericli.vip/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
